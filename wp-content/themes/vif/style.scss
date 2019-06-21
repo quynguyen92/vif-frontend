@@ -1,0 +1,60 @@
+/*
+Theme Name: VIF
+Author: VIF TeamRequires at least: WordPress 4.9.6
+Version: 1.0
+Text Domain: vif
+*/
+@import "sass/variables-site/variables-site";
+@import "sass/mixins/mixins-master";
+
+/* Normalize */
+
+@import "sass/normalize";
+
+/* Typography */
+
+@import "sass/typography/typography";
+
+/* Elements */
+
+@import "sass/elements/elements";
+
+/* Forms */
+
+@import "sass/forms/forms";
+
+/* Navigation */
+
+@import "sass/navigation/navigation";
+
+/* Accessibility */
+
+@import "sass/modules/accessibility";
+
+/* Alignments */
+
+@import "sass/modules/alignments";
+
+/* Clearings */
+
+@import "sass/modules/clearings";
+
+/* Layout */
+
+@import "sass/layout/layout";
+
+/* Content */
+
+@import "sass/site/site";
+
+/* Widgets */
+
+@import "sass/site/secondary/widgets";
+
+/* Blocks */
+
+@import "sass/blocks/blocks";
+
+/* Media */
+
+@import "sass/media/media";
