@@ -1,4 +1,3 @@
-</div><!-- #content -->
 <footer id="colophon" class="site-footer ">
     <div data-elementor-type="jet_footer" data-elementor-id="249" class="elementor elementor-249" data-elementor-settings="[]">
         <div class="elementor-inner">
@@ -176,7 +175,7 @@
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-jet-logo jet-blocks">
                                                     <div class="jet-logo jet-logo-type-image jet-logo-display-block">
-                                                        <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/" class="jet-logo__link"><img src="./Speed_files/logo.png" class="jet-logo__img" alt="Speed" width="411" height="112" srcset="https://ld-wp.template-help.com/wordpress_prod-23276/v1/wp-content/uploads/2019/04/logo.png 2x"></a>
+                                                        <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/" class="jet-logo__link"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.jpg' ?>" class="jet-logo__img" alt="Speed" width="411" height="112" srcset="https://ld-wp.template-help.com/wordpress_prod-23276/v1/wp-content/uploads/2019/04/logo.png 2x"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,7 +200,4 @@
             </div>
         </div>
     </div>
-</footer><!-- #footer -->
-</div><!-- #page -->
-</body>
-</html>
+</footer>
