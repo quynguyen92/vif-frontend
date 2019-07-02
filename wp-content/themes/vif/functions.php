@@ -23,13 +23,10 @@ function vif_widgets_init() {
 add_action( 'widgets_init', 'vif_widgets_init' );
 
 function vif_load_styles() {
-	wp_enqueue_style( 'vif-frontend', get_template_directory_uri() . '/public/css/frontend.min.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-style', get_template_directory_uri() . '/public/css/style.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-styles', get_template_directory_uri() . '/public/css/styles.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-blog-layouts-module', get_template_directory_uri() . '/public/css/blog-layouts-module.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-fontawesome', get_template_directory_uri() . '/public/lib/fontawesome/css/fontawesome.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-fontawesome-solid', get_template_directory_uri() . '/public/lib/fontawesome/css/solid.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-fontawesome-brands', get_template_directory_uri() . '/public/lib/fontawesome/css/brands.css', array(), wp_get_theme()->get( 'Version' ));
-	wp_enqueue_style( 'vif-bootstrap', get_template_directory_uri() . '/public/lib/bootstrap-4.3.1/css/bootstrap.css', array(), wp_get_theme()->get( 'Version' ));
+    wp_enqueue_style( 'vif-bootstrap', get_template_directory_uri() . '/public/lib/bootstrap-4.3.1/css/bootstrap.css', array(), wp_get_theme()->get( 'Version' ));
+    wp_enqueue_style( 'vif-fontawesome', get_template_directory_uri() . '/public/lib/fontawesome/css/fontawesome.css', array(), wp_get_theme()->get( 'Version' ));
+    wp_enqueue_style( 'vif-fontawesome-solid', get_template_directory_uri() . '/public/lib/fontawesome/css/solid.css', array(), wp_get_theme()->get( 'Version' ));
+    wp_enqueue_style( 'vif-fontawesome-brands', get_template_directory_uri() . '/public/lib/fontawesome/css/brands.css', array(), wp_get_theme()->get( 'Version' ));
+    wp_enqueue_style( 'vif-style', get_template_directory_uri() . '/public/css/style.css', array(), wp_get_theme()->get( 'Version' ));
 }
 add_action( 'get_header', 'vif_load_styles' );
