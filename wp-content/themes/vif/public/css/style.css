@@ -1,3 +1,7 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 15px 0;
 }
@@ -111,7 +115,7 @@ ul {
     font-style: normal;
     text-decoration: none;
     line-height: 18px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 .top-contact {
@@ -133,10 +137,10 @@ ul {
     font-style: normal;
     text-decoration: none;
     line-height: 40px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0;
 }
 
 .top-slide {
@@ -167,8 +171,8 @@ ul {
 }
 
 .elementor-widget-container {
-    margin: 0px 0px 0px 0px;
-    padding: 11px 0px 35px 0px;
+    margin: 0;
+    padding: 11px 0 35px 0;
 }
 
 .elementor-heading-title {
@@ -178,7 +182,7 @@ ul {
     font-style: normal;
     text-decoration: none;
     line-height: 60px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     padding: 0;
     margin: 0;
     color: #3e454c;
@@ -210,7 +214,7 @@ ul {
     font-style: normal;
     text-decoration: none;
     line-height: 30px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     margin: 16px 0;
 }
 
@@ -227,8 +231,8 @@ ul {
 }
 
 .element-icon-box-content {
-    margin: 0px 0px 30px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0 0 30px 0;
+    padding: 0;
 }
 
 .jet-button__instance {
@@ -259,13 +263,13 @@ ul {
 
 .element-section {
     position: relative;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 119px 15px 70px 15px;
 }
 
 .service-item {
-    margin: 0px 38px 30px 0px;
+    margin: 0 38px 30px 0;
     padding: 24px 30px 35px 23px;
     border: 1px solid #3498db;
     border-radius: 6px;
@@ -275,6 +279,7 @@ ul {
     width: 50%;
     float: left;
 }
+
 .elementor-col-25 {
     width: 25%;
     float: left;
@@ -305,7 +310,7 @@ ul {
     font-style: normal;
     text-decoration: none;
     line-height: 25px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 .elementor-icon-box-content {
@@ -329,49 +334,85 @@ ul {
     text-align: left;
     text-transform: uppercase;
 }
+
 .elementor-column-wrap {
-    margin: 0px 0px 20px 0px;
-    padding: 0px 22px 0px 0px;
+    margin: 0 0 20px 0;
+    padding: 0 22px 0 0;
 }
+
 .pricing-table {
     background-color: #ffffff;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: #dfdede;
     border-radius: 6px 6px 6px 6px;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     text-align: center;
+    position: relative;
 }
+
 .pricing-table__heading {
+    font-size: 14px;
     background-color: #3498db;
-    padding: 7px 0px 1px 0px;
+    padding: 7px 0 1px 0;
     text-align: center;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0 0;
 }
+
 .pricing-table__title {
+    font-size: 14px;
     color: #ffffff;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1.4px;
     padding: 0;
+    margin: 20px 0 0;
 }
+
+
+.pricing-table__price {
+    background-color: #3498db;
+    padding: 0 0 13px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pricing-table__price-val {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.69em;
+}
+
+.pricing-table__price-suffix {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.75em;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
 .pricing-table__features {
     background-color: #ffffff;
     padding: 14px 10px 18px 10px;
     text-align: center;
+    display: block;
 }
+
 .pricing-feature.item-included {
     color: #7e7d7d;
     font-size: 16px;
     font-weight: 400;
     line-height: 2.125em;
 }
+
 .pricing-table__action {
     background-color: #ffffff;
-    padding: 0px 0px 21px 0px;
-    border-radius: 0px 0px 6px 6px;
+    padding: 0 0 21px 0;
+    border-radius: 0 0 6px 6px;
     text-align: center;
+    display: inline-flex;
 }
+
 .pricing-table__action .pricing-table-button {
     font-weight: 400;
     text-transform: uppercase;
@@ -388,4 +429,153 @@ ul {
     background-color: #ffffff;
     color: #3498db;
     text-decoration: none;
+}
+
+.footer {
+    width: 100%;
+    background-color: #2b3138;
+    clear: both;
+}
+
+.footer section {
+    background-color: #2b3138;
+    display: inline-block;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 0 15px 0;
+}
+
+.footer .elementor-heading-title {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: #3498db;
+}
+
+.footer .elementor-text-editor {
+    font-size: 15px;
+    text-align: left;
+    color: #59636f;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.footer .elementor-widget-jet-posts a {
+    color: #ffffff;
+}
+
+.footer .elementor-widget-jet-posts h4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .elementor-widget-jet-posts .post-meta {
+    font-size: 12px;
+    color: #9798a6;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: 0;
+    padding: 10px 0 0 0;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.footer .elementor-widget-jet-posts .post-meta a {
+    color: #9798a6;
+}
+
+.footer .elementor-icon-list-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+    padding-bottom: calc(10px / 2);
+}
+
+.footer .elementor-icon-list-item {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+
+.footer .elementor-icon-list-item a {
+    width: 100%;
+}
+
+.footer .elementor-icon-list-icon {
+    width: 17px;
+}
+
+.footer .elementor-icon-list-icon i {
+    color: #3498db;
+    font-size: 17px;
+}
+
+.footer .elementor-icon-list-text {
+    color: #59636f;
+    padding-left: 0;
+}
+
+.footer .elementor-element-populated {
+    margin: 20px 0 25px 0;
+    padding: 0 15px 0 70px;
+}
+
+.footer .elementor-element-populated-custom {
+    margin: 20px 0 25px 0;
+    padding: 0 15px 0 15px;
+}
+
+.footer .social-item {
+    margin-right: 15px;
+    background-color: #59636f;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    padding: .5em;
+    width: 1em;
+    height: 1em;
+}
+
+.footer .social-item i {
+    width: 1em;
+    height: 1em;
+}
+
+.footer .social-item:hover {
+    background-color: #3498db;
+    opacity: .9;
+    color: #fff;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+.footer .copyright .elementor-element-populated {
+    margin: 0;
+    padding: 0;
 }
