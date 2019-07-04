@@ -118,13 +118,13 @@
                 <div class="element-container">
                     <div class="elementor-row">
                         <div class="elementor-element elementor-col-50">
-                            <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-column-wrap elementor-element-populated-custom">
                                 <div class="elementor-widget-wrap">
                                     <div class="elementor-element elementor-widget elementor-widget-jet-logo">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-jet-logo jet-blocks">
                                                 <div class="jet-logo jet-logo-type-image jet-logo-display-block">
-                                                    <a href="/" class="jet-logo__link"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="VIF" height="200"></a>
+                                                    <a href="/" class="jet-logo__link"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="VIF" height="80"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div class="elementor-element elementor-col-50">
-                            <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-column-wrap elementor-element-populated-custom">
                                 <div class="elementor-widget-wrap">
                                     <div class="elementor-element elementor-widget elementor-widget-text-editor">
                                         <div class="elementor-widget-container">

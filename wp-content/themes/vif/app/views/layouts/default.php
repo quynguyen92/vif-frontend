@@ -20,7 +20,7 @@
                 case empty($uri) || $uri == '/':
                     get_template_part('app/views/home/index');
                     break;
-                case !empty($uri) && file_exists(TEMPLATEPATH . '/' . trim($uri, '/') . '/index.php'):
+                case !empty($uri) && file_exists(TEMPLATEPATH . '/app/views/' . trim($uri, '/') . '/index.php'):
                     get_template_part('app/views/' . trim($uri, '/') . '/index');
                     break;
                 default:

@@ -24,7 +24,8 @@ ul {
 }
 
 .site-header {
-    height: 0;
+    height: 230px;
+    background-color: #635e5f;
 }
 
 .header-wrap {
@@ -62,6 +63,7 @@ ul {
     font-size: 15px;
     border-radius: 50%;
     text-decoration: none;
+    padding: 10px;
 }
 
 .social-wrap .social-item i {
@@ -518,11 +520,11 @@ ul {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 20px 0 15px 0;
+    padding: 20px 0 0 0;
 }
 
 .footer .copyright {
-    padding: 0 0 15px 0;
+    padding: 0;
 }
 
 .footer .elementor-heading-title {
@@ -629,19 +631,18 @@ ul {
 }
 
 .footer .social-item {
+    font-size: 15px;
     margin-right: 15px;
     background-color: #59636f;
     border-radius: 50%;
     text-align: center;
     color: #fff;
-    padding: .5em;
-    width: 1em;
-    height: 1em;
+    padding: 10px;
 }
 
 .footer .social-item i {
-    width: 1em;
-    height: 1em;
+    width: 20px;
+    height: 20px;
 }
 
 .footer .social-item:hover {
@@ -660,5 +661,14 @@ ul {
 }
 
 .footer .copyright .elementor-text-editor-custom {
-    line-height: 200px;
+    line-height: 80px;
+}
+
+.footer .elementor-widget-container {
+    margin: 0;
+    padding: 11px 0 0 0;
+}
+
+.error-404 {
+    min-height: 232px;
 }

@@ -15,7 +15,7 @@
             <div class="navigation-container">
                 <div class="navigation-wrap">
                     <div class="top-logo">
-                        <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" class="" alt="VIF" height="150">
+                        <img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" class="" alt="VIF" height="80">
                     </div>
                     <div class="top-menu-wrap">
                         <ul class="top-menu">

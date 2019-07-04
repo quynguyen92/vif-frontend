@@ -293,84 +293,78 @@
                         </div>
                         <div class="elementor-element elementor-widget elementor-widget-cherry_team">
                             <div class="elementor-widget-container">
-                                <div class="elementor-">
-                                    <div class="team-container">
-                                        <div class="cherry-team team-wrap template-default">
-                                            <div class="team-listing cherry-team-row">
-                                                <div id="team-5056" class="elementor-col-33">
-                                                    <div class="team-listing_photo__wrap">
-                                                        <div class="team-listing_photo">
-                                                            <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/hieubx.png' ?>" class="avatar wp-post-image" alt="Hieu Bui Xuan"></a>
-                                                        </div>
-                                                        <div class="team-listing_photo__overflow">
-                                                            <div class="team-listing_socials">
-                                                                <ul class="team-socials">
-                                                                    <li class="team-socials_item">
-                                                                        <a href="https://www.facebook.com/Bui.xuan.hieu" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                    <li class="team-socials_item">
-                                                                        <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                    <li class="team-socials_item">
-                                                                        <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-google-plus"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="team-listing_name"><a href="javascript:void(0)">Hieu Bui Xuan</a></h4>
-                                                    <small class="team-listing_position"><span class="team-meta_item position">CEO</span></small>
-                                                </div>
-                                                <div id="team-623" class="elementor-col-33">
-                                                    <div class="team-listing_photo__wrap">
-                                                        <div class="team-listing_photo">
-                                                            <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/tuyenlh.png' ?>" class="avatar wp-post-image" alt="Tuyen Le Huu"></a>
-                                                        </div>
-                                                        <div class="team-listing_photo__overflow">
-                                                            <div class="team-listing_socials">
-                                                                <ul class="team-socials">
-                                                                    <li class="team-socials_item">
-                                                                        <a href="https://www.facebook.com/huutuyen91" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                    <li class="team-socials_item">
-                                                                        <a href="" class="team-socials_link" target="_blank" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                    <li class="team-socials_item">
-                                                                        <a href="" class="team-socials_link" target="_blank" rel="nofollow"><i class="team-socials_icon fab fa-google-plus"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="team-listing_name"><a href="javascript:void(0)">Tuyen Le Huu</a></h4>
-                                                    <small class="team-listing_position"><span class="team-meta_item position">CTO</span></small>
-                                                </div>
-                                                <div id="team-622" class="elementor-col-33">
-                                                    <div class="team-listing_photo__wrap">
-                                                        <div class="team-listing_photo">
-                                                            <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/quynh.png' ?>" class="avatar wp-post-image" alt="Quy Nguyen Huu"></a>
-                                                        </div>
-                                                        <div class="team-listing_photo__overflow">
-                                                            <div class="team-listing_socials">
-                                                                <div class="team-socials">
-                                                                    <div class="team-socials_item">
-                                                                        <a href="https://www.facebook.com/nguyenquyyy" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </div>
-                                                                    <div class="team-socials_item">
-                                                                        <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </div>
-                                                                    <div class="team-socials_item">
-                                                                        <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-instagram"></i><span class="team-socials_label empty-label"></span></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="team-listing_name"><a href="javascript:void(0)">Quy Nguyen Huu</a></h4>
-                                                    <small class="team-listing_position"><span class="team-meta_item position">Expert</span></small>
+                                <div class="team-listing">
+                                    <div class="elementor-col-33">
+                                        <div class="team-listing_photo__wrap">
+                                            <div class="team-listing_photo">
+                                                <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/hieubx.png' ?>" class="avatar wp-post-image" alt="Hieu Bui Xuan"></a>
+                                            </div>
+                                            <div class="team-listing_photo__overflow">
+                                                <div class="team-listing_socials">
+                                                    <ul class="team-socials">
+                                                        <li class="team-socials_item">
+                                                            <a href="https://www.facebook.com/Bui.xuan.hieu" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                        <li class="team-socials_item">
+                                                            <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                        <li class="team-socials_item">
+                                                            <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-google-plus"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                        <h4 class="team-listing_name"><a href="javascript:void(0)">Hieu Bui Xuan</a></h4>
+                                        <small class="team-listing_position"><span class="team-meta_item position">CEO</span></small>
+                                    </div>
+                                    <div class="elementor-col-33">
+                                        <div class="team-listing_photo__wrap">
+                                            <div class="team-listing_photo">
+                                                <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/tuyenlh.png' ?>" class="avatar wp-post-image" alt="Tuyen Le Huu"></a>
+                                            </div>
+                                            <div class="team-listing_photo__overflow">
+                                                <div class="team-listing_socials">
+                                                    <ul class="team-socials">
+                                                        <li class="team-socials_item">
+                                                            <a href="https://www.facebook.com/huutuyen91" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                        <li class="team-socials_item">
+                                                            <a href="" class="team-socials_link" target="_blank" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                        <li class="team-socials_item">
+                                                            <a href="" class="team-socials_link" target="_blank" rel="nofollow"><i class="team-socials_icon fab fa-google-plus"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="team-listing_name"><a href="javascript:void(0)">Tuyen Le Huu</a></h4>
+                                        <small class="team-listing_position"><span class="team-meta_item position">CTO</span></small>
+                                    </div>
+                                    <div class="elementor-col-33">
+                                        <div class="team-listing_photo__wrap">
+                                            <div class="team-listing_photo">
+                                                <a href="javascript:void(0)"><img height="306" src="<?php echo get_template_directory_uri() . '/public/images/our_team/quynh.png' ?>" class="avatar wp-post-image" alt="Quy Nguyen Huu"></a>
+                                            </div>
+                                            <div class="team-listing_photo__overflow">
+                                                <div class="team-listing_socials">
+                                                    <div class="team-socials">
+                                                        <div class="team-socials_item">
+                                                            <a href="https://www.facebook.com/nguyenquyyy" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-facebook-f"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </div>
+                                                        <div class="team-socials_item">
+                                                            <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-twitter"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </div>
+                                                        <div class="team-socials_item">
+                                                            <a href="" target="_blank" class="team-socials_link" rel="nofollow"><i class="team-socials_icon fab fa-instagram"></i><span class="team-socials_label empty-label"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="team-listing_name"><a href="javascript:void(0)">Quy Nguyen Huu</a></h4>
+                                        <small class="team-listing_position"><span class="team-meta_item position">Expert</span></small>
                                     </div>
                                 </div>
                             </div>
