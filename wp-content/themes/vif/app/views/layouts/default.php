@@ -1,7 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php echo get_the_title(); ?></title>
+    <title><?php echo empty(get_the_title()) ? 'VIF - Value To Success': get_the_title(); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

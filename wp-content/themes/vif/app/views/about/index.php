@@ -245,7 +245,7 @@
     <div class="element-container">
         <div class="elementor-widget-wrap">
             <section class="elementor-element-custom element-section">
-                <h2 class="elementor-heading-title elementor-size-default">OUR VISION</h2></div>
+                <h2 class="elementor-heading-title elementor-size-default">OUR VISION</h2>
             </section>
             <section class="elementor-element-custom element-section">
                 <div class="element-container">
