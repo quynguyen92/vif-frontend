@@ -37,36 +37,15 @@
                                     <div class="elementor-element elementor-widget-icon-list">
                                         <div class="elementor-widget-container">
                                             <ul class="elementor-icon-list-items">
-                                                <li class="elementor-icon-list-item">
-                                                    <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/">
-                                                        <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                                        <span class="elementor-icon-list-text">home</span>
-                                                    </a>
-                                                </li>
-                                                <li class="elementor-icon-list-item">
-                                                    <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/about/">
-                                                        <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                                        <span class="elementor-icon-list-text">about</span>
-                                                    </a>
-                                                </li>
-                                                <li class="elementor-icon-list-item">
-                                                    <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/services/">
-                                                        <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                                        <span class="elementor-icon-list-text">Services</span>
-                                                    </a>
-                                                </li>
-                                                <li class="elementor-icon-list-item">
-                                                    <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/blog/">
-                                                        <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                                        <span class="elementor-icon-list-text">blog</span>
-                                                    </a>
-                                                </li>
-                                                <li class="elementor-icon-list-item">
-                                                    <a href="https://ld-wp.template-help.com/wordpress_prod-23276/v1/contacts/">
-                                                        <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                                        <span class="elementor-icon-list-text">contacts</span>
-                                                    </a>
-                                                </li>
+                                                <?php $topMenus = wp_get_nav_menu_items('menu-header'); ?>
+                                                <?php foreach ($topMenus as $item) : ?>
+                                                    <li class="elementor-icon-list-item">
+                                                        <a href="<?php echo $item->url; ?>">
+                                                            <span class="elementor-icon-list-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                                            <span class="elementor-icon-list-text"><?php echo strtoupper($item->title); ?></span>
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach; ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -123,7 +102,7 @@
                                     <div class="elementor-element elementor-widget-social-icons">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-social-icons-wrapper">
-                                                <a class="social-item" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a class="social-item" href="https://www.facebook.com/VIFVIETNAM" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                                 <a class="social-item" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                                                 <a class="social-item" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
                                             </div>
@@ -145,7 +124,7 @@
                                         <div class="elementor-widget-container">
                                             <div class="elementor-jet-logo jet-blocks">
                                                 <div class="jet-logo jet-logo-type-image jet-logo-display-block">
-                                                    <a href="/" class="jet-logo__link"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.jpg' ?>" alt="VIF" height="112"></a>
+                                                    <a href="/" class="jet-logo__link"><img src="<?php echo get_template_directory_uri() . '/public/images/logo.png' ?>" alt="VIF" height="200"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -158,7 +137,7 @@
                                 <div class="elementor-widget-wrap">
                                     <div class="elementor-element elementor-widget elementor-widget-text-editor">
                                         <div class="elementor-widget-container">
-                                            <div class="elementor-text-editor elementor-clearfix">© 2019 VIF Co., JSC<br> All rights reserved.</a></div>
+                                            <div class="elementor-text-editor elementor-text-editor-custom elementor-clearfix">© 2019 VIF Co., JSC. All rights reserved.</a></div>
                                         </div>
                                     </div>
                                 </div>

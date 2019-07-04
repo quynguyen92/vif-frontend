@@ -1,5 +1,17 @@
+body, html {
+    margin: 0;
+    background-color: white;
+}
+
 body {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
     font-family: Roboto, sans-serif;
+    letter-spacing: 0;
+    text-align: left;
+    color: #3b3d42;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,7 +76,6 @@ ul {
     position: relative;
     z-index: 1;
 }
-
 
 .navigation-container {
     max-width: 1200px;
@@ -132,7 +143,7 @@ ul {
 }
 
 .contact-wrap a {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
     font-style: normal;
     text-decoration: none;
@@ -280,6 +291,11 @@ ul {
     float: left;
 }
 
+.elementor-col-33 {
+    width: 33.33%;
+    float: left;
+}
+
 .elementor-col-25 {
     width: 25%;
     float: left;
@@ -315,6 +331,10 @@ ul {
 
 .elementor-icon-box-content {
     box-sizing: border-box;
+}
+
+.element-section.service {
+    padding: 30px 15px 70px 15px;
 }
 
 .best-deal {
@@ -368,7 +388,6 @@ ul {
     padding: 0;
     margin: 20px 0 0;
 }
-
 
 .pricing-table__price {
     background-color: #3498db;
@@ -431,6 +450,62 @@ ul {
     text-decoration: none;
 }
 
+.team-listing {
+    display: flex;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.team-listing a:hover {
+    text-decoration: none;
+}
+
+.team-listing .team-listing_name {
+    color: #3498db;
+    margin: 0;
+    padding: 0;
+}
+
+.team-listing .team-listing_position {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2.8px;
+    display: block;
+}
+
+.team-listing .team-meta_item {
+    color: #f58200;
+}
+
+.team-listing .team-listing_socials {
+    padding: 10px 0;
+}
+
+.team-listing .team-socials {
+    width: 150px;
+    margin: 0 auto;
+    list-style: none;
+    display: inline-block;
+}
+
+.team-listing .team-socials .team-socials_item {
+    float: left;
+    margin-left: 50px;
+}
+
+.team-listing .team-socials .team-socials_item:first-child {
+    margin-left: 0;
+}
+
+.team-listing .team-socials .team-socials_item a {
+    color: #3498db;
+}
+
+.team-listing .team-socials .team-socials_icon {
+    font-size: 16px;
+}
+
 .footer {
     width: 100%;
     background-color: #2b3138;
@@ -444,6 +519,10 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
     padding: 20px 0 15px 0;
+}
+
+.footer .copyright {
+    padding: 0 0 15px 0;
 }
 
 .footer .elementor-heading-title {
@@ -545,7 +624,7 @@ ul {
 }
 
 .footer .elementor-element-populated-custom {
-    margin: 20px 0 25px 0;
+    margin: 20px 0 0 0;
     padding: 0 15px 0 15px;
 }
 
@@ -578,4 +657,8 @@ ul {
 .footer .copyright .elementor-element-populated {
     margin: 0;
     padding: 0;
+}
+
+.footer .copyright .elementor-text-editor-custom {
+    line-height: 200px;
 }

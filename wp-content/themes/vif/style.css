@@ -6,18 +6,3 @@ Requires at least: WordPress 4.9.6
 Version: 1.0
 Text Domain: vifonline.com.vn
 */
-
-body, html {
-    margin: 0;
-    background-color: white;
-}
-body {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.6;
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #3b3d42;
-}
