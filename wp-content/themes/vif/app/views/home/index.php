@@ -5,6 +5,7 @@
 </section>
 <section class="element-section bussiness">
     <div class="element-container">
+        <h3 class="element-icon-box-title text-center bussiness-title">Cty cổ phần VIF Việt Nam</h3>
         <div class="bussiness-item">
             <div class="bussiness-wrap">
                 <div class="bussiness-container">

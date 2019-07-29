@@ -20,9 +20,12 @@
                     <div class="top-menu-wrap">
                         <ul class="top-menu">
                             <?php $topMenus = wp_get_nav_menu_items('menu-header'); ?>
-                            <?php foreach ($topMenus as $item) : ?>
-                                <li><a href="<?php echo $item->url; ?>"><?php echo strtoupper($item->title); ?></a></li>
-                            <?php endforeach; ?>
+                            <?php if (!empty($topMenus)): ?>
+                                <?php foreach ($topMenus as $item) : ?>
+                                    <li><a href="<?php echo $item->url; ?>"><?php echo strtoupper($item->title); ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </ul>
                     </div>
                     <div class="top-contact">
