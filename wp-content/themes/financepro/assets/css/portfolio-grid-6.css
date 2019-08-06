@@ -1,0 +1,96 @@
+
+/*********************** Start Layout 11 & Isotope 10 ********************/
+
+.pfp-wrapper .pfp-layout11 .tlp-portfolio-item,
+.pfp-wrapper .rt-isotope3 .tlp-portfolio-item,
+.pfp-wrapper .pfp-carousel10 .tlp-portfolio-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+	max-width: 360px;
+}
+.pfp-wrapper .pfp-layout11 .tlp-portfolio-item figure,
+.pfp-wrapper .rt-isotope3 .tlp-portfolio-item figure,
+.pfp-wrapper .pfp-carousel10 .tlp-portfolio-item figure {
+    position: relative;
+    overflow: hidden;
+}
+.pfp-wrapper .pfp-layout11 .tlp-overlay,
+.pfp-wrapper .rt-isotope3 .tlp-overlay,
+.pfp-wrapper .pfp-carousel10 .tlp-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    opacity:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    text-decoration: none;
+    text-align: center;
+}
+.pfp-wrapper .pfp-layout11 .tlp-overlay .item-info,
+.pfp-wrapper .rt-isotope3 .tlp-overlay .item-info,
+.pfp-wrapper .pfp-carousel10 .tlp-overlay .item-info {
+    z-index:10;
+    color:#ffffff;
+    padding-top: 10%;
+    position: relative;
+}
+.pfp-wrapper .pfp-layout11 .tlp-portfolio-item h3,
+.pfp-wrapper .rt-isotope3 .tlp-portfolio-item h3,
+.pfp-wrapper .pfp-carousel10 .tlp-portfolio-item h3 {
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0px;
+    padding: 5px 0px;
+    color: #fff;
+}
+.pfp-wrapper .pfp-layout11 .tlp-overlay .item-info p,
+.pfp-wrapper .rt-isotope3 .tlp-overlay .item-info p,
+.pfp-wrapper .pfp-carousel10 .tlp-overlay .item-info p {
+    padding: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.pfp-wrapper .pfp-layout11 .tlp-portfolio-item h3 a,
+.pfp-wrapper .rt-isotope3 .tlp-portfolio-item h3 a,
+.pfp-wrapper .pfp-carousel10 .tlp-portfolio-item h3 a {
+    color: #fff;
+    text-align: center;
+}
+.pfp-wrapper .pfp-layout11 .tlp-portfolio-item:hover .tlp-overlay,
+.pfp-wrapper .rt-isotope3 .tlp-portfolio-item:hover .tlp-overlay,
+.pfp-wrapper .pfp-carousel10 .tlp-portfolio-item:hover .tlp-overlay {
+    opacity: 1;
+}
+.pfp-wrapper .pfp-layout11 .tlp-overlay .line,
+.pfp-wrapper .rt-isotope3 .tlp-overlay .line,
+.pfp-wrapper .pfp-carousel10 .tlp-overlay .line {
+    height: 2px;
+    width:0%;
+    margin: 8px auto;
+    background-color: #ffffff;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+.pfp-wrapper .pfp-layout11 .tlp-overlay:hover .line,
+.pfp-wrapper .rt-isotope3 .tlp-overlay:hover .line,
+.pfp-wrapper .pfp-carousel10 .tlp-overlay:hover .line {
+    width:40%;
+}
+@media ( max-width:1199px ){
+	.pfp-wrapper .pfp-layout11 .tlp-overlay .item-info p,
+	.pfp-wrapper .rt-isotope3 .tlp-overlay .item-info p,
+	.pfp-wrapper .pfp-carousel10 .tlp-overlay .item-info p {
+	    padding: 5px;
+	}
+}

@@ -1,0 +1,6 @@
+.redux-dev-mode-notice-container {
+	display: none;
+}
+.redux-container-image_select .redux-image-select {
+	margin: 0 0 10px !important;
+}

@@ -1,0 +1,40 @@
+<wpml-config>
+    <admin-texts>
+        <key name="financepro">
+            <key name="phone" />
+            <key name="address" />
+            <key name="hour" />
+            <key name="copyright_text" />
+            <key name="header_btn_txt" />
+            <key name="error_title" />
+            <key name="error_text1" />
+            <key name="error_text2" />
+            <key name="error_buttontext" />
+        </key>
+    </admin-texts>
+    <custom-types>
+        <custom-type translate="1">fin_service</custom-type>
+        <custom-type translate="1">fin_case</custom-type>
+        <custom-type translate="1">fin_team</custom-type>
+        <custom-type translate="1">fin_portfolio</custom-type>
+        <custom-type translate="1">fin_testimonial</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">fin_service_category</taxonomy>
+        <taxonomy translate="1">fin_case_category</taxonomy>
+        <taxonomy translate="1">fin_portfolio_category</taxonomy>
+        <taxonomy translate="1">fin_team_category</taxonomy>
+        <taxonomy translate="1">fin_testimonial_category</taxonomy>
+    </taxonomies>
+    <custom-fields>
+       <custom-field action="translate">fin_team_designation</custom-field>
+       <custom-field action="translate">fin_team_phone</custom-field>
+       <custom-field action="translate">fin_team_email</custom-field>
+       <custom-field action="translate">fin_team_socials_header</custom-field>
+       <custom-field action="translate">fin_team_socials</custom-field>
+       <custom-field action="translate">fin_tes_designation</custom-field>
+       <custom-field action="translate">skill_name</custom-field>
+       <custom-field action="translate">skill_value</custom-field>
+       <custom-field action="translate">skill_bar_color</custom-field>
+   </custom-fields>
+</wpml-config>
