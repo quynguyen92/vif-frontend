@@ -18,7 +18,8 @@ class N2GeneratorPostsPosts extends N2GeneratorAbstract {
         new N2ElementWordPressCategories($group, 'postscategory', n2_('Categories'), 0);
         new N2ElementWordPressTags($group, 'posttags', n2_('Tags'), 0);
         new N2ElementWordPressTaxonomies($group, 'postcustomtaxonomy', n2_('Taxonomies'), 0, array(
-            'postType' => 'post'
+            'postType' => 'post',
+            'skip'     => true
         ));
 
         $posts = new N2ElementGroup($filter, 'poststickygroup', n2_('Posts'));

@@ -959,7 +959,7 @@ N2D('SmartSliderSimple', ['SmartSliderAbstract'], function ($, undefined) {
 
     SmartSliderSimple.prototype.initMainAnimation = function () {
 
-        if (!this.disabled.backgroundAnimations && nModernizr.csstransforms3d && nModernizr.csstransformspreserve3d && this.parameters.bgAnimations) {
+        if (!this.disabled.backgroundAnimations && this.parameters.bgAnimations && (!n2const.isIE && !n2const.isEdge)) {
             this.mainAnimation = new N2Classes.SmartSliderFrontendBackgroundAnimation(this, this.parameters.mainanimation, this.parameters.bgAnimations);
         } else {
             this.mainAnimation = new N2Classes.SmartSliderMainAnimationSimple(this, this.parameters.mainanimation);
@@ -986,6 +986,16 @@ N2D('SmartSliderSimple', ['SmartSliderAbstract'], function ($, undefined) {
         var $background = N2Classes.SmartSliderAbstract.prototype.findSlideBackground.call(this, slide);
         $background.appendTo(this.sliderElement.find('.n2-ss-slide-backgrounds'));
         return $background;
+    };
+
+    SmartSliderSimple.prototype.getAnimationAxis = function () {
+        switch (this.mainAnimation.parameters.type) {
+            case 'vertical':
+            case 'vertical-reversed':
+                return 'vertical';
+        }
+
+        return 'horizontal';
     };
 
     return SmartSliderSimple;

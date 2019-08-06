@@ -387,9 +387,11 @@ class N2SmartSliderExport {
         preg_match('/^([a-zA-Z]+)\[(.*)]/', $url, $matches);
         if (!empty($matches)) {
             if ($matches[1] == 'lightbox') {
-                $images = explode(',', $matches[2]);
-                foreach ($images AS $image) {
-                    $this->addImage($image);
+                $data = json_decode($matches[2]);
+                if ($data) {
+                    foreach ($data->urls AS $image) {
+                        $this->addImage($image);
+                    }
                 }
             }
         }

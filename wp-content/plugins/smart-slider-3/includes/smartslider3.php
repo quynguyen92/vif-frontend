@@ -102,6 +102,10 @@ class SmartSlider3 {
             return $ret;
         }, 1000000);
 
+        if (defined('WP_ROCKET_VERSION')) {
+            require_once dirname(__FILE__) . '/integrations/wp-rocket.php';
+        }
+
 
         /**
          * For ajax based page loaders
@@ -113,6 +117,19 @@ class SmartSlider3 {
                 N2SS3Shortcode::forceIframe('ajax');
             }
         }
+
+        global $wp_version;
+        if (version_compare($wp_version, '5.1', '<')) {
+            add_action('wpmu_new_blog', 'SmartSlider3::onInsertSite', -1000000);
+        } else {
+            add_action('wp_insert_site', 'SmartSlider3::onInsertSite', -1000000);
+        }
+    }
+
+    public static function onInsertSite() {
+
+        remove_action('save_post', 'SmartSlider3::clear_slider_cache');
+        remove_action('wp_untrash_post', 'SmartSlider3::clear_slider_cache');
     }
 
     public static function plugin_action_links($links, $file) {

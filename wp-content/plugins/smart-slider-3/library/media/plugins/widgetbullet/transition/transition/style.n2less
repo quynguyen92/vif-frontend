@@ -51,10 +51,8 @@
   }
 
   .nextend-bullet-bar .n2-bullet {
-    display: inline-block;
     cursor: pointer;
     transition: background-color 0.4s;
-    vertical-align: top;
   }
 
   .nextend-bullet-bar .n2-bullet.n2-active {

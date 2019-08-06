@@ -226,11 +226,7 @@ function upload_is_user_over_quota( $echo = true ) {
 
 	if ( ( $space_allowed - $space_used ) < 0 ) {
 		if ( $echo ) {
-			printf(
-				/* translators: %s: allowed space allocation */
-				__( 'Sorry, you have used your space allocation of %s. Please delete some files to upload more files.' ),
-				size_format( $space_allowed * MB_IN_BYTES )
-			);
+			_e( 'Sorry, you have used your space allocation. Please delete some files to upload more files.' );
 		}
 		return true;
 	} else {
@@ -1118,13 +1114,9 @@ function network_edit_site_nav( $args = array() ) {
 		// Link classes
 		$classes = array( 'nav-tab' );
 
-		// Aria-current attribute.
-		$aria_current = '';
-
 		// Selected is set by the parent OR assumed by the $pagenow global
 		if ( $r['selected'] === $link_id || $link['url'] === $GLOBALS['pagenow'] ) {
-			$classes[]    = 'nav-tab-active';
-			$aria_current = ' aria-current="page"';
+			$classes[] = 'nav-tab-active';
 		}
 
 		// Escape each class
@@ -1134,13 +1126,13 @@ function network_edit_site_nav( $args = array() ) {
 		$url = add_query_arg( array( 'id' => $r['blog_id'] ), network_admin_url( $link['url'] ) );
 
 		// Add link to nav links
-		$screen_links[ $link_id ] = '<a href="' . esc_url( $url ) . '" id="' . esc_attr( $link_id ) . '" class="' . $esc_classes . '"' . $aria_current . '>' . esc_html( $link['label'] ) . '</a>';
+		$screen_links[ $link_id ] = '<a href="' . esc_url( $url ) . '" id="' . esc_attr( $link_id ) . '" class="' . $esc_classes . '">' . esc_html( $link['label'] ) . '</a>';
 	}
 
 	// All done!
-	echo '<nav class="nav-tab-wrapper wp-clearfix" aria-label="' . esc_attr__( 'Secondary menu' ) . '">';
+	echo '<h2 class="nav-tab-wrapper wp-clearfix">';
 	echo implode( '', $screen_links );
-	echo '</nav>';
+	echo '</h2>';
 }
 
 /**

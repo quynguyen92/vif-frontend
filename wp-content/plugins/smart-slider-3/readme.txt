@@ -4,7 +4,7 @@ Tags: slider, wordpress slider, image slider, layer slider, responsive slider, s
 Donate link: https://sites.fastspring.com/nextend/product/smartslider3donate
 Requires at least: 4.6
 Tested up to: 5.2
-Stable tag: 3.3.20
+Stable tag: 3.3.21
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -195,6 +195,18 @@ Of course! Smart Slider use protocol relative urls which works fine on http:// a
 9. Layer slider with layers styles. Made with FREE version.
 
 == Changelog ==
+
+= 3.3.21 - 05. July 2019. =
+* Feature: Slider default font size now uses rem instead of px
+* Fix: Col border
+* Fix: Fix for autoplay click 
+* Fix: Divi full width section's module 
+* Fix: Safari col/content/row background hover 
+* Fix: Vertical bullets on RTL websites 
+* Other: French translation updated
+* Other: Spanish translation updated
+* Deprecated: Modernizr removed from the slider
+
 
 = 3.3.20 - 23. May 2019. =
 * Feature: WordPress Fusion builder element for Avada theme 

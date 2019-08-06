@@ -2253,9 +2253,12 @@ N2D('QuickSlides', function ($, undefined) {
                             tr.append($('<td />').append('<img src="' + slide.data('image') + '" style="width:100px;"/>'));
                             tr.append($('<td />').append(that.createInput(n2_('Name'), 'title-' + id, slide.data('title'), 'width: 240px;')));
                             tr.append($('<td />').append(that.createTextarea(n2_('Description'), 'description-' + id, slide.data('description'), 'width: 330px;height:24px;')));
-                            var link = slide.data('link').split('|*|');
-                            tr.append($('<td />').append(that.createLink(n2_('Link'), 'link-' + id, link[0], 'width: 180px;')));
-                            tr.append($('<td />').append(that.createTarget(n2_('Target window'), 'target-' + id, link.length > 1 ? link[1] : '_self', '')));
+                            tr.append($('<td />').append(that.createLink(n2_('Link'), 'link-' + id, slide.data('link'), 'width: 180px;')));
+                            var target = slide.data('href-target');
+                            if(typeof target !== "string"){
+                                target = "_self";
+                            }
+                            tr.append($('<td />').append(that.createTarget(n2_('Target window'), 'target-' + id, target, '')));
 
                             new N2Classes.FormElementUrl('link-' + id, nextend.NextendElementUrlParams);
 
@@ -2270,13 +2273,15 @@ N2D('QuickSlides', function ($, undefined) {
                                     id = slide.data('slideid'),
                                     name = $('#title-' + id).val(),
                                     description = $('#description-' + id).val(),
-                                    link = $('#link-' + id).val() + '|*|' + $('#target-' + id).val();
+                                    link = $('#link-' + id).val(),
+                                    hreftarget = $('#target-' + id).val();
 
-                                if (name != slide.data('title') || description != slide.data('description') || link != slide.data('link')) {
+                                if (name != slide.data('title') || description != slide.data('description') || link != slide.data('link') || hreftarget != slide.data('href-target') ) {
                                     changed[id] = {
                                         name: name,
                                         description: description,
-                                        link: link
+                                        link: link,
+                                        hreftarget: hreftarget
                                     };
                                 }
                             }, this));
@@ -2302,6 +2307,7 @@ N2D('QuickSlides', function ($, undefined) {
                                         slideBox.data('description', slides[slideID].rawDescription);
                                         slideBox.attr('data-link', slides[slideID].rawLink);
                                         slideBox.data('link', slides[slideID].rawLink);
+                                        slideBox.data('href-target', slides[slideID].rawLinkHref);
                                     }
                                 }, this));
                             }
@@ -2352,7 +2358,7 @@ N2D('QuickSlides', function ($, undefined) {
         if (arguments.length == 4) {
             style = arguments[3];
         }
-        var nodes = $('<div class="n2-form-element-mixed"><div class="n2-mixed-group"><div class="n2-mixed-label"><label for="' + id + '">' + label + '</label></div><div class="n2-mixed-element"><div class="n2-form-element-list"><select id="' + id + '" autocomplete="off" style="' + style + '"><option value="_self">Self</option><option value="_blank">Blank</option></select></div></div></div></div>');
+        var nodes = $('<div class="n2-form-element-mixed"><div class="n2-mixed-group"><div class="n2-mixed-label"><label for="' + id + '">' + label + '</label></div><div class="n2-mixed-element"><div class="n2-form-element-list"><select id="' + id + '" autocomplete="off" style="' + style + '"><option value="_self">Self</option><option value="_blank">New</option><option value="_parent">Parent</option><option value="_top">Top</option></select></div></div></div></div>');
         nodes.find('select').val(value);
         return nodes;
     };
@@ -16625,7 +16631,7 @@ N2D('BgAnimationEditor', ['NextendFragmentEditorController'], function ($, undef
         this.directionTab = new N2Classes.FormElementRadio('n2-background-animation-preview-tabs', ['0', '1']);
         this.directionTab.element.on('nextendChange.n2-editor', $.proxy(this.directionTabChanged, this));
 
-        if (!nModernizr.csstransforms3d || !nModernizr.csstransformspreserve3d) {
+        if (n2const.isIE || n2const.isEdge) {
             N2Classes.Notification.error('Background animations are not available in your browser. It works if the <i>transform-style: preserve-3d</i> feature available. ')
         }
 
@@ -16697,7 +16703,7 @@ N2D('BgAnimationEditor', ['NextendFragmentEditorController'], function ($, undef
         var current = this.bgImages.eq(this.current),
             next = this.bgImages.eq(1 - this.current);
 
-        if (nModernizr.csstransforms3d && nModernizr.csstransformspreserve3d) {
+        if (!n2const.isIE && !n2const.isEdge) {
             this.currentAnimation = new N2Classes['SmartSliderBackgroundAnimation' + this.animationProperties.type](this, current, next, this.animationProperties, 1, this.direction);
 
             this.slides.eq(this.current).css('zIndex', 2);

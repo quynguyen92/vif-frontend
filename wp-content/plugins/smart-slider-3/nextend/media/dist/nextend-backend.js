@@ -5810,17 +5810,19 @@ N2D('FormElementMixed', ['FormElement'], function ($, undefined) {
         this.triggerOutsideChange();
     };
 
-    FormElementMixed.prototype.insideChange = function (value) {
-        this.element.val(value);
+	FormElementMixed.prototype.insideChange = function (value) {
+		if (typeof value === "string" && value.indexOf(this.separator) !== -1) {
+			this.element.val(value);
 
-        var values = value.split(this.separator);
+			var values = value.split(this.separator);
 
-        for (var i = 0; i < this.elements.length; i++) {
-            this.elements[i].data('field').insideChange(values[i]);
-        }
+			for (var i = 0; i < this.elements.length; i++) {
+				this.elements[i].data('field').insideChange(values[i]);
+			}
 
-        this.triggerInsideChange();
-    };
+			this.triggerInsideChange();
+		}
+	};
 
     FormElementMixed.prototype.getValue = function () {
         var values = [];

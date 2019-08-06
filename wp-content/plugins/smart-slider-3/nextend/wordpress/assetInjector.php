@@ -138,16 +138,90 @@ class N2WordpressAssetInjector {
         return $buffer;
     }
 
+    private static $htmlCommentTokens = array();
+
+    public static function tokenizeHtmlComments($matches) {
+
+        $index = count(self::$htmlCommentTokens);
+
+        self::$htmlCommentTokens[$index] = $matches[0];
+
+        return '<!--TOKEN' . $index . '-->';
+    }
+
+    public static function restoreHtmlComments($matches) {
+
+        return self::$htmlCommentTokens[$matches[1]];
+    }
+
     public static function platformRenderEnd($buffer) {
         static $once = false;
         if (!$once) {
             $once = true;
             self::finalizeCssJs();
 
-            if (self::$nextend_css != '' && strpos($buffer, '<!--n2css-->') !== false) {
-                $buffer = str_replace('<!--n2css-->', self::$nextend_css, $buffer);
+            if (!empty(self::$nextend_css)) {
+                if (strpos($buffer, '<!--n2css-->') !== false) {
+                    $buffer = str_replace('<!--n2css-->', self::$nextend_css, $buffer);
 
-                self::$nextend_css = '';
+                    self::$nextend_css = '';
+                } else {
+                    list($head, $body) = preg_split('/<\/head[\s]*>/i', $buffer, 2);
+
+                    /**
+                     * We must tokenize the HTML comments in the head to prepare for condition CSS/scripts
+                     * Eg.: <!--[if lt IE 9]><link rel='stylesheet' href='ie8.css?ver=1.0' type='text/css' media='all' /> <![endif]-->
+                     */
+                    $head = preg_replace_callback('/<!--.*?-->/s', array(
+                        'N2WordpressAssetInjector',
+                        'tokenizeHtmlComments'
+                    ), $head);
+
+                    /**
+                     * Find the first <script> tag with src attribute
+                     */
+                    $pattern = '/<script[^>]+src=[\'"][^>"\']*[\'"]/si';
+                    if (preg_match($pattern, $head, $matches)) {
+
+                        $splitBy = $matches[0];
+
+                        $headParts = preg_split($pattern, $head, 2);
+
+                        /**
+                         * Find the last stylesheet before the first script
+                         */
+                        if (preg_match_all('/<link[^>]*rel=[\'"]stylesheet[\'"][^>]*>/si', $headParts[0], $matches, PREG_SET_ORDER)) {
+                            /**
+                             * If there is a match we insert our stylesheet after that.
+                             */
+                            $match          = array_pop($matches);
+                            $lastStylesheet = $match[0];
+
+                            $headParts[0] = str_replace($lastStylesheet, $lastStylesheet . self::$nextend_css, $headParts[0]);
+
+                            self::$nextend_css = '';
+                        } else {
+                            /**
+                             * No stylesheet found, so  we insert our stylesheet before the first <script>.
+                             */
+                            $headParts[0] .= self::$nextend_css;
+
+                            self::$nextend_css = '';
+                        }
+
+                        $head = implode($splitBy, $headParts);
+
+                        /**
+                         * Restore HTML comments
+                         */
+                        $head = preg_replace_callback('/<!--TOKEN([0-9]+)-->/', array(
+                            'N2WordpressAssetInjector',
+                            'restoreHtmlComments'
+                        ), $head);
+
+                        $buffer = $head . '</head>' . $body;
+                    }
+                }
             }
 
             if (self::$nextend_css != '' || self::$nextend_js != '') {

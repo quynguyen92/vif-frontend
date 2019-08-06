@@ -12,6 +12,8 @@ class N2ElementWordPressTaxonomies extends N2ElementList {
 
     protected $postSeparator = '_x_';
 
+    protected $skip = false;
+
     public function __construct($parent, $name = '', $label = '', $default = '', array $parameters = array()) {
         parent::__construct($parent, $name, $label, $default, $parameters);
 
@@ -19,13 +21,17 @@ class N2ElementWordPressTaxonomies extends N2ElementList {
 
         $taxonomyNames = get_object_taxonomies($this->postType);
 
-        $skip = array(
-            'category',
-            'post_tag'
-        );
+        if($this->skip){
+            $skip = array(
+                'category',
+                'post_tag'
+            );
+        } else {
+            $skip = array();
+        }
 
         foreach ($taxonomyNames as $taxonomyName) {
-            if (($this->postType == 'post' && !in_array($taxonomyName, $skip)) || $this->postType != 'post') {
+            if (!in_array($taxonomyName, $skip)) {
                 $terms = get_terms(array(
                     'taxonomy' => $taxonomyName
                 ));
@@ -50,6 +56,10 @@ class N2ElementWordPressTaxonomies extends N2ElementList {
 
     public function setPostSeparator($postSeparator) {
         $this->postSeparator = $postSeparator;
+    }
+
+    public function setSkip($skip) {
+        $this->skip = $skip;
     }
 
 }

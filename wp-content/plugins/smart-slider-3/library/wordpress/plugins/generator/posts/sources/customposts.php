@@ -264,7 +264,7 @@ class N2GeneratorPostsCustomPosts extends N2GeneratorAbstract {
 
                         if (!empty($metaMoreArray[2])) {
                             $key_query += array(
-                                'value' => $metaMoreArray[2]
+                                'value' => $this->checkKeywords($metaMoreArray[2])
                             );
                         }
 

@@ -431,10 +431,12 @@ class N2SmartsliderSlidesModel extends N2Model {
         return $id;
     }
 
-    public function quickSlideUpdate($slide, $title, $description, $link) {
+    public function quickSlideUpdate($slide, $title, $description, $link, $hreftarget) {
 
-        $params         = json_decode($slide['params'], true);
-        $params['link'] = $link;
+        $params                 = json_decode($slide['params'], true);
+        unset($params['link']);
+        $params['href']         = $link;
+        $params['href-target']  = $hreftarget;
 
         return $this->db->update(array(
             'title'       => $title,
@@ -851,6 +853,7 @@ class N2SmartsliderSlidesModel extends N2Model {
             'data-title'       => $slide->getRawTitle(),
             'data-description' => $slide->getRawDescription(),
             'data-link'        => $slide->getRawLink(),
+            'data-href-target' => $slide->getRawLinkHref(),
             'data-image'       => N2ImageHelper::fixed($image),
             'data-editUrl'     => $editUrl
         );

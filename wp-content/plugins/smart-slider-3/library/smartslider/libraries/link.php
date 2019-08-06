@@ -72,7 +72,7 @@ class N2LinkSlideEvent {
 
     public static function parse($argument, &$attributes, $isEditor = false) {
         if (!$isEditor) {
-            $attributes['onclick'] = "n2ss.trigger(event, '" . $argument . "');";
+            $attributes['onclick'] = "n2ss.trigger(this, '" . $argument . "', event);";
         }
 
         return '#';

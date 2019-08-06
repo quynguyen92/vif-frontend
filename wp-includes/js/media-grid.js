@@ -944,7 +944,7 @@ SelectModeToggle = Button.extend(/** @lends wp.media.view.SelectModeToggle.proto
 		if ( this.controller.isModeActive( 'select' ) ) {
 			this.model.set( {
 				size: 'large',
-				text: l10n.cancel
+				text: l10n.cancelSelection
 			} );
 			children.not( '.spinner, .media-button' ).hide();
 			this.$el.show();
@@ -998,11 +998,11 @@ DeleteSelected = Button.extend(/** @lends wp.media.view.DeleteSelectedButton.pro
 
 	filterChange: function( model ) {
 		if ( 'trash' === model.get( 'status' ) ) {
-			this.model.set( 'text', l10n.restoreSelected );
+			this.model.set( 'text', l10n.untrashSelected );
 		} else if ( wp.media.view.settings.mediaTrash ) {
 			this.model.set( 'text', l10n.trashSelected );
 		} else {
-			this.model.set( 'text', l10n.deletePermanently );
+			this.model.set( 'text', l10n.deleteSelected );
 		}
 	},
 

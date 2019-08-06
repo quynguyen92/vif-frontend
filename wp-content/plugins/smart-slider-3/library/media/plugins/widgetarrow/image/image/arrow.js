@@ -29,7 +29,7 @@ N2D('SmartSliderWidgetArrowImage', function ($, undefined) {
 
         this.previous = $('#' + this.slider.elementID + '-arrow-previous').on('click', $.proxy(function (e) {
             e.stopPropagation();
-            this.slider[n2const.rtl.previous]();
+            this.slider[this.slider.getDirectionPrevious()]();
         }, this));
 
         this.previousResize = this.previous.find('.n2-resize');
@@ -39,7 +39,7 @@ N2D('SmartSliderWidgetArrowImage', function ($, undefined) {
 
         this.next = $('#' + this.slider.elementID + '-arrow-next').on('click', $.proxy(function (e) {
             e.stopPropagation();
-            this.slider[n2const.rtl.next]();
+            this.slider[this.slider.getDirectionNext()]();
         }, this));
 
         this.nextResize = this.next.find('.n2-resize');

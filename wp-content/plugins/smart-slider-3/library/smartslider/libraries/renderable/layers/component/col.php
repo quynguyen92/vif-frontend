@@ -252,8 +252,8 @@ class N2SSSlideComponentCol extends N2SSSlideComponent {
 
         $this->createProperty('boxshadow', '0|*|0|*|0|*|0|*|00000080');
         $this->createProperty('boxshadow-hover');
-
-        $this->createProperty('borderwidth', '1');
+        
+        $this->createProperty('borderwidth', '1|*|1|*|1|*|1');
         $this->createProperty('borderstyle', 'none');
         $this->createProperty('bordercolor', 'FFFFFFFF');
         $this->createProperty('borderwidth-hover');

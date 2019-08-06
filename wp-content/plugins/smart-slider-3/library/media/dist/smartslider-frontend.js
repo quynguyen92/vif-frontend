@@ -169,6 +169,30 @@ N2D('SmartSliderBackgrounds', function ($, undefined) {
 
     return SmartSliderBackgrounds;
 });
+N2D('FontSize', function ($, undefined) {
+
+    var $testElement;
+
+    function getDocumentElementFontSize() {
+        /**
+         * Font size min value is 6px and max is 10000px, but browser calculates the rem/em/% with the non-normalized value.
+         * So if the <html> font-size set to 2px, jQuery will return 6px. But if we place an element with 4rem, then
+         * that element's font-size will be 2px*4 = 8px
+         * To prevent this, we use 10rem for getting the font size.
+         */
+        if ($testElement === undefined) {
+            $testElement = $('<div style="font-size:10rem;"></div>').appendTo('body');
+        }
+
+        return parseFloat($testElement.css('fontSize')) / 10;
+    }
+
+    return {
+        toRem: function (pxValue) {
+            return (pxValue / getDocumentElementFontSize()) + 'rem';
+        }
+    };
+});
 N2D('SmartSliderLoad', function ($, undefined) {
 
     /**
@@ -427,9 +451,13 @@ N2D('SmartSliderApi', function ($, undefined) {
         }
     };
 
-    SmartSliderApi.prototype.trigger = function (el, e) {
+    SmartSliderApi.prototype.trigger = function (el, eventName, e) {
+        if (e) {
+            e.preventDefault();
+        }
+
         var $el = $(el),
-            parts = e.split(','),
+            parts = eventName.split(','),
             slide = $el.closest('.n2-ss-slide,.n2-ss-static-slide'),
             lastEvent = slide.data('ss-last-event');
 
@@ -449,13 +477,13 @@ N2D('SmartSliderApi', function ($, undefined) {
             }
         }
         if (match === parts.length - 1) {
-            e = parts[0];
+            eventName = parts[0];
         } else {
-            e = parts[match + 1];
+            eventName = parts[match + 1];
         }
 
-        slide.data('ss-last-event', e);
-        slide.triggerHandler('ss' + e);
+        slide.data('ss-last-event', eventName);
+        slide.triggerHandler('ss' + eventName);
     };
 
     SmartSliderApi.prototype.applyAction = function (e, action) {
@@ -468,9 +496,12 @@ N2D('SmartSliderApi', function ($, undefined) {
     };
 
     SmartSliderApi.prototype.applyActionWithClick = function (e) {
-        if (!nextend.shouldPreventClick) {
-            e.preventDefault();
-            this.applyAction.apply(this, arguments);
+
+        if (this.isClickAllowed(e)) {
+            if (!nextend.shouldPreventClick) {
+                e.preventDefault();
+                this.applyAction.apply(this, arguments);
+            }
         }
     };
 
@@ -1657,6 +1688,32 @@ N2D('SmartSliderAbstract', function ($, undefined) {
         return false;
     };
 
+    SmartSliderAbstract.prototype.getAnimationAxis = function () {
+        return 'horizontal';
+    };
+
+    SmartSliderAbstract.prototype.getDirectionPrevious = function () {
+        if (n2const.isRTL() && this.getAnimationAxis() === 'horizontal') {
+            return 'next';
+        }
+        return 'previous';
+    };
+
+    SmartSliderAbstract.prototype.getDirectionNext = function () {
+        if (n2const.isRTL() && this.getAnimationAxis() === 'horizontal') {
+            return 'previous';
+        }
+        return 'next';
+    };
+
+    SmartSliderAbstract.prototype.previousWithDirection = function () {
+        return this[this.getDirectionPrevious()]();
+    };
+
+    SmartSliderAbstract.prototype.nextWithDirection = function () {
+        return this[this.getDirectionNext()]();
+    };
+
     return SmartSliderAbstract;
 });
 
@@ -1706,10 +1763,10 @@ N2D('SmartSliderWidgets', function ($, undefined) {
                     this.onStateChangeSingle(parts[1]);
                     break;
                 case 'nonCarouselFirst':
-                    this.onStateChangeSingle('previous');
+                    this.onStateChangeSingle(this.slider.getDirectionPrevious());
                     break;
                 case 'nonCarouselLast':
-                    this.onStateChangeSingle('next');
+                    this.onStateChangeSingle(this.slider.getDirectionNext());
                     break;
                 default:
                     this.onStateChangeAll();
@@ -1733,9 +1790,10 @@ N2D('SmartSliderWidgets', function ($, undefined) {
             }
 
             if (state) {
-                if (widgetName === 'previous' && this.states.nonCarouselFirst) {
+
+                if (widgetName === this.slider.getDirectionPrevious() && this.states.nonCarouselFirst) {
                     state = false;
-                } else if (widgetName === 'next' && this.states.nonCarouselLast) {
+                } else if (widgetName === this.slider.getDirectionNext() && this.states.nonCarouselLast) {
                     state = false;
                 }
             }
@@ -1861,9 +1919,11 @@ N2D('SmartSliderWidgets', function ($, undefined) {
             var value = this.dimensions[key];
             if (typeof value == "object") {
                 for (var key2 in value) {
-                    variableText += "var " + key + key2 + " = " + value[key2] + ";";
+                    if (typeof value[key2] == "number") {
+                        variableText += "var " + key + key2 + " = " + value[key2] + ";";
+                    }
                 }
-            } else {
+            } else if (typeof value == "number") {
                 variableText += "var " + key + " = " + value + ";";
             }
         }
@@ -1964,9 +2024,11 @@ N2D('SmartSliderWidgets', function ($, undefined) {
             var value = this.dimensions[key];
             if (typeof value == "object") {
                 for (var key2 in value) {
-                    variableText += "var " + key + key2 + " = " + value[key2] + ";";
+                    if (typeof value[key2] == "number") {
+                        variableText += "var " + key + key2 + " = " + value[key2] + ";";
+                    }
                 }
-            } else {
+            } else if (typeof value == "number") {
                 variableText += "var " + key + " = " + value + ";";
             }
         }
@@ -2350,7 +2412,19 @@ N2D('SmartSliderControlAutoplay', function ($, undefined) {
             this.disable();
         }
 
+        this.clickHandled = false;
+
         slider.controls.autoplay = this;
+    };
+
+    SmartSliderControlAutoplay.prototype.preventClickHandle = function () {
+
+        this.clickHandled = true;
+
+        setTimeout($.proxy(function () {
+            this.clickHandled = false;
+        }, this), 300);
+
     };
 
     SmartSliderControlAutoplay.prototype.onReady = function () {
@@ -2400,19 +2474,19 @@ N2D('SmartSliderControlAutoplay', function ($, undefined) {
         }
         if (this.parameters.pause.click && !this.parameters.resume.click) {
             sliderElement.on('universalclick.autoplay', $.proxy(function (e) {
-                if (e.ss3HandledAutoplay === undefined) {
+                if (!this.clickHandled) {
                     this.pauseAutoplayUniversal(e);
                 }
             }, this));
         } else if (!this.parameters.pause.click && this.parameters.resume.click) {
             sliderElement.on('universalclick.autoplay', $.proxy(function (e) {
-                if (e.ss3HandledAutoplay === undefined) {
+                if (!this.clickHandled) {
                     this.pauseAutoplayExtraPlayingEnded(e, 'autoplayButton');
                 }
             }, this));
         } else if (this.parameters.pause.click && this.parameters.resume.click) {
             sliderElement.on('universalclick.autoplay', $.proxy(function (e) {
-                if (e.ss3HandledAutoplay === undefined) {
+                if (!this.clickHandled) {
                     if (!this._paused) {
                         this.pauseAutoplayUniversal(e);
                     } else {
@@ -2946,10 +3020,10 @@ N2D('SmartSliderControlKeyboard', function ($, undefined) {
     SmartSliderControlKeyboard.prototype.parseEventHorizontal = function (e) {
         switch (e.keyCode) {
             case 39: // right arrow
-                this.slider[n2const.rtl.next]();
+                this.slider[n2const.isRTL() ? 'previous' : 'next']();
                 return true;
             case 37: // left arrow
-                this.slider[n2const.rtl.previous]();
+                this.slider[n2const.isRTL() ? 'next' : 'previous']();
                 return true;
             default:
                 return false;
@@ -3427,9 +3501,9 @@ N2D('SmartSliderControlTouchHorizontal', 'SmartSliderControlTouch', function ($,
     SmartSliderControlTouchHorizontal.prototype.callAction = function (direction, isSystem) {
         switch (direction) {
             case 'left':
-                return this.slider[n2const.rtl.next].call(this.slider, isSystem);
+                return this.slider[n2const.isRTL() ? 'previous' : 'next'].call(this.slider, isSystem);
             case 'right':
-                return this.slider[n2const.rtl.previous].call(this.slider, isSystem);
+                return this.slider[n2const.isRTL() ? 'next' : 'previous'].call(this.slider, isSystem);
         }
 
         return false;
@@ -3458,10 +3532,17 @@ N2D('SmartSliderControlTouchHorizontal', 'SmartSliderControlTouch', function ($,
             previousSlideAllowed = true;
         }
 
-        this.setState({
-            right: previousSlideAllowed,
-            left: nextSlideAllowed
-        }, true);
+        if (n2const.isRTL() && this.slider.getAnimationAxis() !== 'vertical') {
+            this.setState({
+                right: nextSlideAllowed,
+                left: previousSlideAllowed
+            }, true);
+        } else {
+            this.setState({
+                right: previousSlideAllowed,
+                left: nextSlideAllowed
+            }, true);
+        }
     };
 
     SmartSliderControlTouchHorizontal.prototype.syncTouchAction = function () {
@@ -4053,7 +4134,7 @@ N2D('FrontendComponent', function ($, undefined) {
             var fontSize = this.getDevice('fontsize');
             this.refreshBaseSize(fontSize);
             if (this.isAdaptiveFont) {
-                this.$layer.css('font-size', (16 * fontSize / 100) + 'px');
+                this.$layer.css('font-size', N2Classes.FontSize.toRem(16 * fontSize / 100));
             } else {
                 this.$layer.css('font-size', fontSize + '%');
             }
@@ -4073,6 +4154,10 @@ N2D('FrontendComponent', function ($, undefined) {
 
     FrontendComponent.prototype.onResize = function (ratios, dimensions, isStatic) {
         if (this.isVisible || this.placement.alwaysResize) {
+            if (this.isAdaptiveFont) {
+                var fontSize = this.getDevice('fontsize');
+                this.$layer.css('font-size', N2Classes.FontSize.toRem(16 * fontSize / 100));
+            }
             for (var i = 0; i < this.children.length; i++) {
                 this.children[i].onResize(ratios, dimensions, isStatic)
             }
@@ -5353,7 +5438,7 @@ N2D('SmartSliderResponsive', function ($, undefined) {
                     /**
                      * We can detect every width changes with a dummy iframe.
                      */
-                    var iframe = $('<iframe class="bt_skip_resize" sandbox="allow-same-origin allow-scripts" style="margin:0;padding:0;border:0;display:block;width:100%;height:0;min-height:0;max-height:0px;"/>')
+                    var iframe = $('<iframe class="bt_skip_resize" title="Resize helper" sandbox="allow-same-origin allow-scripts" style="margin:0;padding:0;border:0;display:block;width:100%;height:0;min-height:0;max-height:0;"/>')
                         .on('load', $.proxy(function (e) {
                             var width = 0,
                                 $frame = $(e.target.contentWindow ? e.target.contentWindow : e.target.contentDocument.defaultView).on('resize', $.proxy(function (e) {
@@ -6373,9 +6458,10 @@ N2D('SmartSliderResponsiveElement', function ($, undefined) {
     SmartSliderResponsiveElement.prototype.fontSizePrepare = function (value) {
         var mode = this.responsive.getNormalizedModeString();
         if (value < this.helper.fontSize[mode]) {
-            return this.helper.fontSize[mode];
+            value = this.helper.fontSize[mode];
         }
-        return value;
+
+        return N2Classes.FontSize.toRem(value);
     };
 
     /**
@@ -6396,7 +6482,6 @@ N2D('SmartSliderResponsiveElement', function ($, undefined) {
 
     /**
      * Changes the original font size based on the current mode and also updates the current value on the element.
-     * @param mode
      */
     SmartSliderResponsiveElement.prototype.setFontSizeByMode = function () {
         this.element.css('fontSize', this.fontSizePrepare(this.data['fontSize'] * this._lastRatio));

@@ -233,7 +233,20 @@ class N2SmartSliderSlide extends N2SmartSliderComponentOwnerAbstract {
     }
 
     public function getRawLink() {
-        return $this->parameters->getIfEmpty('link', '|*|');
+        $linkV1 = $this->parameters->getIfEmpty('link', '');
+        if(!empty($linkV1)){
+            list($link, $target) = array_pad((array)N2Parse::parse($linkV1), 2, '');
+            return $link;
+        }
+        return $this->parameters->getIfEmpty('href', '');
+    }
+    public function getRawLinkHref() {
+        $linkV1 = $this->parameters->getIfEmpty('link', '');
+        if(!empty($linkV1)){
+            list($link, $target) = array_pad((array)N2Parse::parse($linkV1), 2, '');
+            return $target;
+        }
+        return $this->parameters->getIfEmpty('href-target', '_self');
     }
 
     public function getSlider() {
