@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Flaticon-custom";
+  src: url("./Flaticon-custom.eot");
+  src: url("./Flaticon-custom.eot?#iefix") format("embedded-opentype"),
+  url("./Flaticon-custom.woff") format("woff"),
+  url("./Flaticon-custom.ttf") format("truetype"),
+  url("./Flaticon-custom.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon-custom";
+    src: url("./Flaticon-custom.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-custom-"]:before, [class*=" flaticon-custom-"]:before,
+[class^="flaticon-custom-"]:after, [class*=" flaticon-custom-"]:after {   
+  font-family: Flaticon-custom;
+  font-style: normal;
+}
+
+.flaticon-custom-arrows:before { content: "\f100"; }
+.flaticon-custom-commerce:before { content: "\f101"; }
+.flaticon-custom-graphic:before { content: "\f102"; }
+.flaticon-custom-graphic-1:before { content: "\f103"; }
+.flaticon-custom-handshake:before { content: "\f104"; }
+.flaticon-custom-headphones:before { content: "\f105"; }
+.flaticon-custom-interface:before { content: "\f106"; }
+.flaticon-custom-layers:before { content: "\f107"; }
+.flaticon-custom-light-bulb:before { content: "\f108"; }
+.flaticon-custom-mail:before { content: "\f109"; }
+.flaticon-custom-share:before { content: "\f10a"; }
+.flaticon-custom-target:before { content: "\f10b"; }
+.flaticon-custom-text-on-paper-sheet-sketch:before { content: "\f10c"; }

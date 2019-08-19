@@ -1,0 +1,594 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WP Logo Showcase\n"
+"POT-Creation-Date: 2016-11-09 18:51+0600\n"
+"PO-Revision-Date: 2016-11-09 18:51+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wp-logo-showcase.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lib/controllers/rtWLSAjaxResponse.php:53
+msgid "Settings successfully updated"
+msgstr ""
+
+#: lib/controllers/rtWLSAjaxResponse.php:56
+#: lib/controllers/rtWLSPreview.php:209
+msgid "Security Error !!"
+msgstr ""
+
+#: lib/controllers/rtWLSAjaxResponse.php:76
+msgid "Select Short code"
+msgstr ""
+
+#: lib/controllers/rtWLSAjaxResponse.php:78
+msgid "Default"
+msgstr ""
+
+#: lib/controllers/rtWLSAjaxResponse.php:87
+msgid "No shortcode found."
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:42
+msgid "Logos"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:43 lib/controllers/rtWLSOptions.php:111
+msgid "Logo"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:44 lib/controllers/rtWLSInit.php:47
+msgid "Add New Logo"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:45 lib/controllers/rtWLVisualComposer.php:26
+msgid "Logo Showcase"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:46
+msgid "All Logos"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:48
+msgid "Edit Logo"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:49
+msgid "New Logo"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:50
+msgid "View Logo"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:51
+msgid "Search Logos"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:52
+msgid "No Logos found"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:53
+msgid "No Logos found in Trash"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:75 lib/controllers/rtWLSInit.php:76
+msgctxt "wp-logo-showcase"
+msgid "Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:77 lib/controllers/rtWLSOptions.php:282
+msgid "Categories"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:78
+msgid "All Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:79 lib/controllers/rtWLSInit.php:80
+msgid "Parent Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:81
+msgid "New Category Name"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:82
+msgid "Add New Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:83
+msgid "Edit Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:84
+msgid "Update Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:85
+msgid "View Category"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:86
+msgid "Separate Categories with commas"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:87
+msgid "Add or remove Categories"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:88
+msgid "Choose from the most used"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:89
+msgid "Popular Categories"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:90
+msgid "Search Categories"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:91
+msgid "Not Found"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:106 lib/controllers/rtWLSInit.php:110
+#: lib/controllers/rtWLSInit.php:111 lib/controllers/rtWLSSCMeta.php:52
+msgid "Shortcode"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:107
+msgid "Wp logo showcase Shortcode generator"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:109
+msgid "Shortcode Generator"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:112
+msgid "Edit Shortcode"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:113
+msgid "New Shortcode"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:114
+msgid "View Shortcode"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:115
+msgid "Shortcode Locations"
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:116
+msgid "No Shortcode found."
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:117
+msgid "No Shortcode found in trash."
+msgstr ""
+
+#: lib/controllers/rtWLSInit.php:236
+msgid "Settings"
+msgstr ""
+
+#: lib/controllers/rtWLSMeta.php:35 lib/controllers/rtWLSMeta.php:80
+msgid "Logo Image"
+msgstr ""
+
+#: lib/controllers/rtWLSMeta.php:36
+msgid "Client Website Url"
+msgstr ""
+
+#: lib/controllers/rtWLSMeta.php:130
+msgid "Logo Information"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:30
+msgid "Enable Image Re-Size"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:37
+msgid "Image Width"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:47
+msgid "Image Height"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:57
+msgid "Image Crop"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:96
+msgid "Grid Layout"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:97
+msgid "Carousel Layout"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:98
+msgid "Isotope Layout"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:110
+msgid "Title"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:112
+msgid "Description"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:138
+msgid "Left"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:139
+msgid "Center"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:140
+msgid "Right"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:168
+msgid "Menu Order"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:169
+msgid "Name"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:170
+msgid "Date"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:182
+msgid "Ascending"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:183
+msgid "Descending"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:198
+msgid "Primary color"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:203
+msgid "Button background color on hover"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:208
+msgid "Button background color on active"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:213
+msgid "Button text color"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:227
+msgid "1 Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:228
+msgid "2 Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:229
+msgid "3 Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:230
+msgid "4 Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:231
+msgid "6 Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:243
+msgid "Open in new window"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:244
+msgid "Open in same window"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:245
+msgid "No link"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:261
+msgid "Include only"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:264 lib/controllers/rtWLSOptions.php:271
+msgid "List of post IDs to show (comma-separated values, for example: 1,2,3)"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:268
+msgid "Exclude"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:275
+msgid "Limit"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:278
+msgid "The number of posts to show. Set empty to show all found posts."
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:287
+msgid "Select the category you want to filter, Leave it blank for All category"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:292
+msgid "Order By"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:300
+msgid "Order"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:324
+msgid "Layout"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:331
+msgid "Column"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:340
+msgid "Link Type"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:348
+msgid "ToolTip"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:355
+msgid "Box Highlight"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:362
+msgid "Grayscale"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:368
+msgid "Slides To Show"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:372
+msgid "Number of logo to display each slider"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:376
+msgid "Slides To Scroll"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:380
+msgid "Number of logo to to scroll, Recommended > same as  slides to show"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:384
+msgid "Speed"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:388
+msgid "Auto play Speed in milliseconds"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:392
+msgid "Carousel Options"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:412
+msgid "Auto Play"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:413
+msgid "Arrow nav button"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:414
+msgid "Dots"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:415
+msgid "Pause on hover"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:416
+msgid "Adaptive height"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:417
+msgid "Lazy Load (progressive)"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:418
+msgid "Infinite loop"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:419
+msgid "Center mode"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:420
+msgid "Right to Left"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:435
+msgid "Client website URL"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:436
+msgid "Client URL e.g: http://example.com"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:444
+msgid "Logo Description"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:445
+msgid "Logo description"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:450
+msgid "Custom Image URL"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:451
+msgid "This will dominate over featured image"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:452
+msgid ""
+"If you don't want to use an image from your media gallery, you can set an "
+"URL for your image here."
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:457
+msgid "Alternate Text"
+msgstr ""
+
+#: lib/controllers/rtWLSOptions.php:458
+msgid "Alt for url and image"
+msgstr ""
+
+#: lib/controllers/rtWLSPreview.php:130 lib/controllers/rtWLSShortCode.php:206
+msgid "Show all"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:147
+msgid "Short Code Generator"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:154
+msgid "Layout Preview"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:188
+msgid "Layout Settings"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:189
+msgid "Logo Filtering"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:190
+msgid "Layout Building"
+msgstr ""
+
+#: lib/controllers/rtWLSSCMeta.php:191
+msgid "Styling"
+msgstr ""
+
+#: lib/controllers/rtWLSShortCode.php:271
+msgid "No logo found"
+msgstr ""
+
+#: lib/controllers/rtWLSShortCode.php:274
+msgid "No short code found"
+msgstr ""
+
+#: lib/controllers/rtWLVisualComposer.php:28
+#: lib/controllers/rtWLVisualComposer.php:30
+msgid "Content"
+msgstr ""
+
+#: lib/controllers/rtWLVisualComposer.php:37
+msgid "Select a shortcode"
+msgstr ""
+
+#: lib/controllers/rtWLVisualComposer.php:40
+msgid "Select a shortcode for displaying logo showcase"
+msgstr ""
+
+#: lib/views/settings.php:5
+msgid "Wp Logo Showcases Settings"
+msgstr ""
+
+#: lib/views/settings.php:6
+msgid "General settings"
+msgstr ""
+
+#: lib/views/settings.php:7 lib/views/settings.php:40
+msgid "Documentation"
+msgstr ""
+
+#: lib/views/settings.php:16
+msgid "General Settings"
+msgstr ""
+
+#: lib/views/settings.php:17
+msgid "Custom CSS"
+msgstr ""
+
+#: lib/views/settings.php:36
+msgid "Short Code"
+msgstr ""
+
+#: lib/views/settings.php:38
+msgid "id = short code id (1,2,3,4)"
+msgstr ""
+
+#: lib/views/settings.php:39
+msgid "title = Shot code title (Not recommended)"
+msgstr ""
+
+#: lib/views/settings.php:40
+msgid "Demo"
+msgstr ""
+
+#: lib/widgets/rtWLSWidget.php:26
+msgid "Display the Logo showcase."
+msgstr ""
+
+#: lib/widgets/rtWLSWidget.php:27
+msgid "Wp Logo Showcase"
+msgstr ""
+
+#: lib/widgets/rtWLSWidget.php:57
+msgid "Title:"
+msgstr ""
+
+#: lib/widgets/rtWLSWidget.php:59
+msgid "Select Shortcode:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Logo Showcase"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://radiustheme.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Fully Responsive and Mobile Friendly way to display your partner logo in "
+"different view."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "RadiusTheme"
+msgstr ""

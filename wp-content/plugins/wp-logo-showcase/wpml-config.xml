@@ -1,0 +1,8 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">wlshowcase</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">wlshowcase_category</taxonomy>
+    </taxonomies>
+</wpml-config>

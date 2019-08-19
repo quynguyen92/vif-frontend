@@ -1,0 +1,106 @@
+# Copyright (C) 2017 Radius Theme
+# This file is distributed under the same license as the RT Framework package.
+msgid ""
+msgstr ""
+"Project-Id-Version: RT Framework 1.4\n"
+"Report-Msgid-Bugs-To: support@radiustheme.com\n"
+"POT-Creation-Date: 2017-09-26 12:18:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: RadiusTheme <info@radiustheme.com>\n"
+"Language-Team: RadiusTheme <info@radiustheme.com>\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
+
+#: rt-postmeta-fields.php:72
+msgid "Add More"
+msgstr ""
+
+#: rt-postmeta-fields.php:176
+msgid "Click here to select options"
+msgstr ""
+
+#: rt-postmeta-fields.php:244 rt-widget-fields.php:75
+msgid "Choose Image"
+msgstr ""
+
+#: rt-postmeta-fields.php:245 rt-widget-fields.php:76
+msgid "Remove Image"
+msgstr ""
+
+#: rt-postmeta-fields.php:270
+msgid "Add/Edit Gallery Images"
+msgstr ""
+
+#: rt-postmeta-fields.php:271
+msgid "Remove All Images"
+msgstr ""
+
+#: rt-postmeta-fields.php:293
+msgid "Choose File"
+msgstr ""
+
+#: rt-postmeta-fields.php:294
+msgid "Remove File"
+msgstr ""
+
+#: rt-posts.php:40 rt-posts.php:41 rt-posts.php:93
+msgid "Add New"
+msgstr ""
+
+#: rt-posts.php:42 rt-posts.php:91
+msgid "Edit"
+msgstr ""
+
+#: rt-posts.php:43
+msgid "New"
+msgstr ""
+
+#: rt-posts.php:44 rt-posts.php:88
+msgid "All"
+msgstr ""
+
+#: rt-posts.php:45
+msgid "View"
+msgstr ""
+
+#: rt-posts.php:46 rt-posts.php:87
+msgid "Search"
+msgstr ""
+
+#: rt-posts.php:47
+msgid " not found"
+msgstr ""
+
+#: rt-posts.php:48
+msgid " not found in Trash"
+msgstr ""
+
+#: rt-posts.php:89 rt-posts.php:90
+msgid "Parent"
+msgstr ""
+
+#: rt-posts.php:92
+msgid "Update"
+msgstr ""
+
+#: rt-posts.php:94
+msgid "New name of"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "RT Framework"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://radiustheme.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme Framework by RadiusTheme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Radius Theme"
+msgstr ""

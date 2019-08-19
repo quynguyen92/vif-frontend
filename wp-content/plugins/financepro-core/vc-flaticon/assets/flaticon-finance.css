@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Flaticon-finance";
+  src: url("./Flaticon-finance.eot");
+  src: url("./Flaticon-finance.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon-finance.woff") format("woff"),
+       url("./Flaticon-finance.ttf") format("truetype"),
+       url("./Flaticon-finance.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon-finance";
+    src: url("./Flaticon-finance.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-finance-"]:before, [class*=" flaticon-finance-"]:before,
+[class^="flaticon-finance-"]:after, [class*=" flaticon-finance-"]:after {   
+	font-family: Flaticon-finance;
+	font-style: normal;
+}
+
+.flaticon-finance-money-1:before { content: "\f100"; }
+.flaticon-finance-avatar:before { content: "\f101"; }
+.flaticon-finance-open-book:before { content: "\f102"; }
+.flaticon-finance-chart:before { content: "\f103"; }
+.flaticon-finance-atomic:before { content: "\f104"; }
+.flaticon-finance-time:before { content: "\f105"; }
+.flaticon-finance-money:before { content: "\f106"; }
+.flaticon-finance-support:before { content: "\f107"; }
+.flaticon-finance-get-money:before { content: "\f108"; }
+.flaticon-finance-piggy-bank:before { content: "\f109"; }
+.flaticon-finance-rich:before { content: "\f10a"; }
+.flaticon-finance-notes:before { content: "\f10b"; }
+.flaticon-finance-graph:before { content: "\f10c"; }
