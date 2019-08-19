@@ -4841,3 +4841,28 @@ pre {
 .footer-widget-logo {
   margin-bottom: 0;
 }
+
+.list-news {
+  list-style: none;
+}
+
+.list-news li {
+  position: relative;
+  padding: 0 0 12px;
+}
+
+.list-news li:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #Ed1c24;
+  top: 8px;
+  left: 5px;
+}
+
+.list-news li a {
+  position: relative;
+  display: block;
+  padding-left: 22px;
+}

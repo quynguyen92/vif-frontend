@@ -68,3 +68,8 @@ function financepro_widgets_fallback_notice() {
 	$notice = '<div class="error"><p>' . sprintf( __( "Please update plugin <b><i>FinancePro Core</b></i> to the latest version otherwise some functionalities will not work properly. You can update it from <a href='%s'>here</a>", 'financepro' ), menu_page_url( 'financepro-install-plugins', false ) ) . '</p></div>';
 	echo wp_kses_post( $notice );
 }
+
+/**
+ * Custom theme by VIF Team
+ */
+require_once RDTHEME_BASE_DIR . 'vif/inc/vif_post_list.php';
