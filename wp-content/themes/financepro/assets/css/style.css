@@ -4878,6 +4878,10 @@ pre {
   padding: 30px 0;
 }
 
+.rt-price-table-box.rt-price-table-box-custom {
+  margin: 0 20px;
+}
+
 .rt-price-table-box > span {
   letter-spacing: initial;
   color: #002e52;
