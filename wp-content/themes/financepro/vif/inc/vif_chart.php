@@ -1,19 +1,19 @@
 <?php
 /**
- * Class VifPricingBox
+ * Class VifChart
  *
  * Credit by: VIF Team
  */
-if (!class_exists('VifPricingBox')) {
-    class VifPricingBox extends WPBakeryShortCode
+if (!class_exists('VifChart')) {
+    class VifChart extends WPBakeryShortCode
     {
         /**
-         * VifPricingBox constructor.
+         * VifChart constructor.
          */
         public function __construct()
         {
-            $this->name = __('VIF: Pricing Box');
-            $this->base = 'vif_pricing_box';
+            $this->name = __('VIF: Chart');
+            $this->base = 'vif_chart';
             $this->translate = array(
                 'title' => __("STANDARD"),
                 'cols' => array(
@@ -26,6 +26,7 @@ if (!class_exists('VifPricingBox')) {
             );
             add_action('init', array($this, 'vc_map'));
             add_shortcode($this->base, array($this, 'shortcode'));
+            wp_register_script('vif_chart_script', get_template_directory_uri() . '/vif/assets/js/chart.min.js', array('jquery'), WPB_VC_VERSION, true);
         }
 
         /**
@@ -54,44 +55,87 @@ if (!class_exists('VifPricingBox')) {
         {
             $fields = array(
                 array(
-                    "type" => "colorpicker",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Background Color"),
-                    "param_name" => "bgcolor",
-                    'value' => "#f8f8f8",
-                ),
-                array(
-                    "type" => "colorpicker",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Background Hover Color", 'academics-core'),
-                    "param_name" => "bghover",
-                    'value' => "#cb011b",
+                    'type' => 'textfield',
+                    'heading' => esc_html__('Title'),
+                    'param_name' => 'title',
+                    'description' => '',
+                    'admin_label' => true,
                 ),
                 array(
                     "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
-                    "heading" => __("Title"),
-                    "param_name" => "title",
-                    "value" => $this->translate['title'],
-                ),
-                array(
-                    "type" => "textfield",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Code"),
-                    "param_name" => "code",
+                    "heading" => __("Font Size"),
+                    "param_name" => "font_size",
                     "value" => '',
                 ),
                 array(
                     "type" => "colorpicker",
                     "holder" => "div",
                     "class" => "",
-                    "heading" => __("Code Color"),
-                    "param_name" => "code_color",
+                    "heading" => __("Title Chart Color"),
+                    "param_name" => "title_color",
                     'value' => "#002e52",
+                ),
+                array(
+                    'type' => 'dropdown',
+                    'heading' => esc_html__('Themes'),
+                    'param_name' => 'theme',
+                    'value' => array(
+                        esc_html__('Light 1') => 'light1',
+                        esc_html__('Light 2') => 'light2',
+                        esc_html__('Dark 1') => 'dark1',
+                        esc_html__('Dark 2') => 'dark2',
+                    ),
+                    'description' => esc_html__('Select theme of chart.'),
+                    'admin_label' => true,
+                ),
+                array(
+                    'type' => 'dropdown',
+                    'heading' => esc_html__('Chart Type'),
+                    'param_name' => 'type',
+                    'value' => array(
+                        esc_html__('Bar') => 'bar',
+                        esc_html__('Radar') => 'radar',
+                        esc_html__('Doughnut') => 'doughnut',
+                        esc_html__('PolarArea') => 'polarArea',
+                        esc_html__('Bubble') => 'bubble',
+                        esc_html__('Line') => 'line',
+                    ),
+                    'description' => esc_html__('Select theme of chart.'),
+                    'admin_label' => true,
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Title Axis X"),
+                    "param_name" => "axis_x_title",
+                    "value" => 'Title Axis X',
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Unit Axis X"),
+                    "param_name" => "axis_x_unit",
+                    "value" => 'Unit Axis X',
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Title Axis Y"),
+                    "param_name" => "axis_y_title",
+                    "value" => 'Title Axis Y',
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Unit Axis Y"),
+                    "param_name" => "axis_y_unit",
+                    "value" => 'Unit Axis Y',
                 ),
                 array(
                     "type" => "textfield",
@@ -103,28 +147,10 @@ if (!class_exists('VifPricingBox')) {
                     "description" => __("Api url"),
                 ),
                 array(
-                    "type" => "textfield",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Unit Name"),
-                    "param_name" => "unit",
-                    "value" => '',
-                    "description" => __("eg. VND/CCQ"),
-                ),
-                array(
-                    "type" => "textfield",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("URL"),
-                    "param_name" => "url",
-                    "value" => "",
-                ),
-                array(
                     'type' => 'css_editor',
-                    'heading' => __('Css'),
+                    'heading' => esc_html__('CSS box'),
                     'param_name' => 'css',
-                    'group' => __('Design options'),
-                    'edit_field_class' => 'vc-no-bg vc-no-border',
+                    'group' => esc_html__('Design Options'),
                 ),
             );
 
@@ -139,18 +165,20 @@ if (!class_exists('VifPricingBox')) {
         public function shortcode($atts, $content = '')
         {
             extract(shortcode_atts(array(
-                'bgcolor' => '#f8f8f8',
-                'bghover' => '#cb011b',
                 'title' => $this->translate['title'],
-                'code' => '',
-                'code_color' => '#002e52',
+                'font_size' => '20',
+                'title_color' => '#002e52',
+                'theme' => 'light1',
+                'type' => 'bar',
+                'axis_x_title' => '',
+                'axis_x_unit' => '',
+                'axis_y_title' => '',
+                'axis_y_unit' => '',
                 'api_url' => '',
-                'unit' => '',
-                'url' => '',
                 'css' => '',
             ), $atts));
 
-            return $this->render('vif_pricing_box', get_defined_vars());
+            return $this->render('vif_chart', get_defined_vars());
 
         }
 
@@ -179,4 +207,4 @@ if (!class_exists('VifPricingBox')) {
     }
 }
 
-new VifPricingBox();
+new VifChart();

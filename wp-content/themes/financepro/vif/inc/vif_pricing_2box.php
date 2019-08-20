@@ -52,7 +52,6 @@ if (!class_exists('VifPricing2Box')) {
          */
         public function fields()
         {
-
             $fields = array(
                 // pricing box 1
                 array(
