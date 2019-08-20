@@ -4893,6 +4893,10 @@ pre {
   color: #002e52;
 }
 
+.rt-price-table-box h3 {
+  margin: 0;
+}
+
 .rt-price-table-box .number {
   font-size: 18px;
   font-weight: 400;
