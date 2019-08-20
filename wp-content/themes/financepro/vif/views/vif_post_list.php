@@ -19,7 +19,7 @@ $wp_query = $query;
         <?php if ($showtitle) : ?>
             <div class="section-title-content">
                 <div class="section-title">
-                    <h2 class="section-title-holder" style="color:<?php echo esc_attr($section_title_color); ?>;font-size: <?php echo esc_attr($font_size); ?>"><?php echo wp_kses_post( $title );?></h2>
+                    <h2 class="section-title-holder" style="color:<?php echo esc_attr($section_title_color); ?>;font-size: <?php echo esc_attr($font_size); ?>px"><?php echo wp_kses_post( $title );?></h2>
                 </div>
                 <div class="owl-custom-nav-bar"></div>
                 <div class="clear"></div>
