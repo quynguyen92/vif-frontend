@@ -87,7 +87,6 @@ if (!class_exists('VifChart')) {
                         esc_html__('Dark 1') => 'dark1',
                         esc_html__('Dark 2') => 'dark2',
                     ),
-                    'description' => esc_html__('Select theme of chart.'),
                     'admin_label' => true,
                 ),
                 array(
@@ -102,7 +101,6 @@ if (!class_exists('VifChart')) {
                         esc_html__('Bubble') => 'bubble',
                         esc_html__('Line') => 'line',
                     ),
-                    'description' => esc_html__('Select theme of chart.'),
                     'admin_label' => true,
                 ),
                 array(
