@@ -19,7 +19,7 @@ $wp_query = $query;
         <?php if ($showtitle) : ?>
             <div class="section-title-content">
                 <div class="section-title">
-                    <h2 class="section-title-holder" style="color:<?php echo esc_attr( $section_title_color ); ?>;"><?php echo wp_kses_post( $title );?></h2>
+                    <h2 class="section-title-holder" style="color:<?php echo esc_attr($section_title_color); ?>;font-size: <?php echo esc_attr($font_size); ?>"><?php echo wp_kses_post( $title );?></h2>
                 </div>
                 <div class="owl-custom-nav-bar"></div>
                 <div class="clear"></div>
@@ -35,12 +35,12 @@ $wp_query = $query;
                                 <?php if (have_posts()) : ?>
                                     <?php while ( have_posts() ) : the_post();?>
                                         <li class="latest">
-                                        <div class="rtin-single-post">
-                                            <div class="rtin-item-info">
-                                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                            <div class="rtin-single-post">
+                                                <div class="rtin-item-info">
+                                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                </div>
                                             </div>
-                                        </div>
-                                </li>
+                                        </li>
                                     <?php endwhile;?>
                                 <?php else: ?>
                                     <div class="rtin-single-post">

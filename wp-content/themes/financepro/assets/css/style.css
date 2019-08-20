@@ -4865,4 +4865,33 @@ pre {
   position: relative;
   display: block;
   padding-left: 22px;
+  font-size: 20px;
+  color: #002e52;
+  transition: all 0.5s ease-out;
+}
+
+.list-news li a:hover {
+  color: #cb011b;
+}
+
+.rt-price-table-box {
+  padding: 30px 0;
+}
+
+.rt-price-table-box > span {
+  letter-spacing: initial;
+  color: #002e52;
+}
+
+.rt-price-table-box .number {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.rt-price-table-box .increase {
+  color: #25b100;
+}
+
+.rt-price-table-box .decrease {
+  color: #fc0400;
 }

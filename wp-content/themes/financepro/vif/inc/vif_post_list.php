@@ -117,6 +117,18 @@ if (!class_exists('VifPostList')) {
                     ),
                 ),
                 array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Font Size"),
+                    "param_name" => "font_size",
+                    "value" => 20,
+                    'dependency' => array(
+                        'element' => 'showtitle',
+                        'value' => array('true'),
+                    ),
+                ),
+                array(
                     "type" => "colorpicker",
                     "class" => "",
                     "heading" => __("Section Title Color", "financepro-core"),
@@ -154,6 +166,7 @@ if (!class_exists('VifPostList')) {
                 'orderby' => '',
                 'showtitle' => 'true',
                 'title' => $this->translate['title'],
+                'font_size' => 30,
                 'section_title_color' => '#222222',
                 'total_number_post' => 6,
             ), $atts));

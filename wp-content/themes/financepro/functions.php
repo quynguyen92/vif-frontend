@@ -72,4 +72,4 @@ function financepro_widgets_fallback_notice() {
 /**
  * Custom theme by VIF Team
  */
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_post_list.php';
+require_once RDTHEME_BASE_DIR . 'vif/inc/vif_function.php';
