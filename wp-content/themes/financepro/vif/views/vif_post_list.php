@@ -37,7 +37,7 @@ $wp_query = $query;
                                         <li class="latest">
                                             <div class="rtin-single-post">
                                                 <div class="rtin-item-info">
-                                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                 </div>
                                             </div>
                                         </li>

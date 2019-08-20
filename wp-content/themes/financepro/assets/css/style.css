@@ -4849,6 +4849,12 @@ pre {
 .list-news li {
   position: relative;
   padding: 0 0 12px;
+  border-bottom: 1px dashed #000;
+  margin-top: 12px;
+}
+
+.list-news li:first-of-type {
+  margin-top: 0;
 }
 
 .list-news li:before {
