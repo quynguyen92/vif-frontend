@@ -4896,6 +4896,8 @@ pre {
 
 .rt-price-table-box.rt-price-table-box-custom {
   margin: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .rt-price-table-box > span {
@@ -4927,4 +4929,13 @@ pre {
 
 .team-slider-custom .rtin-item-content .position {
   text-align: center;
+}
+
+.vif-layer-slider.vc_column_container .vc_column-inner {
+  padding-top: 0;
+}
+
+.header-area.header-fixed.bottomBorder {
+  border-bottom: none;
+  background: transparent;
 }
