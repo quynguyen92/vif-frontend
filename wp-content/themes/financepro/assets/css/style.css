@@ -4842,6 +4842,15 @@ pre {
   margin-bottom: 0;
 }
 
+/* VIF Post listing */
+.vif-post-listing .features-news {
+  width: 80%;
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  min-height: 460px;
+}
+
 .list-news {
   list-style: none;
 }
@@ -4872,7 +4881,8 @@ pre {
   display: block;
   padding-left: 22px;
   font-size: 20px;
-  color: #002e52;
+  color: #000;
+  font-weight: 500;
   transition: all 0.5s ease-out;
 }
 
@@ -4908,4 +4918,13 @@ pre {
 
 .rt-price-table-box .decrease {
   color: #fc0400;
+}
+
+.team-slider-custom .rtin-item-content h3 {
+  font-size: 19px;
+  text-align: center;
+}
+
+.team-slider-custom .rtin-item-content .position {
+  text-align: center;
 }

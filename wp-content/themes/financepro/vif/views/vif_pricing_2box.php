@@ -10,6 +10,8 @@ $style2 = "";
 $style2 .= "background-color:{$bgcolor2};";
 $price_html2 = $price2;
 $price_html2 .= !empty($unit2) ? "<span> /$unit2</span>" : '';
+// call api
+$response = isset($api_url) ? remoteApi($api_url) : '';
 ?>
 <div class="vc_row wpb_row vc_row-fluid vc_row-o-equal-height vc_row-flex">
     <div class="wpb_column vc_column_container vc_col-sm-6 text-center <?php echo esc_attr($custom_class); ?>">
