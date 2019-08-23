@@ -4831,7 +4831,16 @@ pre {
 
 /* custom css */
 .footer-top-area {
-  padding: 30px 0;
+  padding: 20px 0 0;
+}
+
+.footer-top-area .widgettitle {
+  font-size: 22px;
+  margin: 0;
+}
+
+.footer-top-area .rt_footer_social_widget .footer-social {
+  margin-top: 0;
 }
 
 #rt-about-social-2 {
