@@ -28,7 +28,7 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
             datasets: [
                 {
                     label: 'Value',
-                    borderColor: '#002e52',
+                    borderColor: '#ffae5f',
                     fill: false,
                     data: dataChart
                 }
@@ -40,12 +40,6 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
                 text: '<?php echo $title; ?>',
                 fontSize: '<?php echo $font_size; ?>',
                 fontColor: '<?php echo $title_color; ?>',
-            },
-            yAxes: function () {
-                
-            },
-            tooltips: {
-
             }
         }
     });
