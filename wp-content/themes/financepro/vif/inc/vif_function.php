@@ -20,16 +20,11 @@ if (!function_exists('remoteApi')) {
             CURLOPT_MAXREDIRS => 2,
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
             CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
-            CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
             CURLOPT_CONNECTTIMEOUT => 60,
             CURLOPT_SSL_VERIFYHOST => false,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_POSTREDIR => CURL_REDIR_POST_ALL,
-            CURLOPT_POST => true,
-            CURLOPT_HTTPHEADER => [
-                'Content-Type:application/json;charset=utf-8'
-            ],
-            CURLOPT_POSTFIELDS => json_encode($params)
+            CURLOPT_CUSTOMREQUEST => 'GET'
         );
 
         $curl = curl_init($url);

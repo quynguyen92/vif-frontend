@@ -2,6 +2,8 @@
 $custom_class = vc_shortcode_custom_css_class($css);
 $style = "";
 $style .= "background-color:{$bgcolor};";
+// call api
+$response = isset($api_url) ? remoteApi($api_url) : '';
 ?>
 <div class="<?php echo esc_attr($custom_class); ?>">
     <canvas id="chartContainer" style="height: 300px; width: 100%;"></canvas>
@@ -10,16 +12,26 @@ $style .= "background-color:{$bgcolor};";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script type="text/javascript">
     var ctx = document.getElementById('chartContainer').getContext('2d');
+    var label = [],
+        dataChart = [];
+    <?php foreach($response as $item) : ?>
+    <?php $item = (array)$item; ?>
+    var dateTmp = new Date(<?php echo '01/' . $item['key'] ?>);
+    var dateString = (dateTmp.getMonth() + 1) + '/' + dateTmp.getFullYear();
+    label.push(dateString);
+    dataChart.push(<?php echo $item['value']; ?>);
+    <?php endforeach; ?>
+
     var chart = new Chart(ctx, {
         type: '<?php echo $type; ?>',
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: label,
             datasets: [
                 {
                     label: 'Value',
                     borderColor: '#002e52',
                     fill: false,
-                    data: [0, 10, 5, 2, 20, 30, 45]
+                    data: dataChart
                 }
             ]
         },
