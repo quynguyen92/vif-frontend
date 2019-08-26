@@ -23,8 +23,9 @@ $change = ($vifastPrice - $lastPrice['value']) / $lastPrice['value'] * 100;
             <div class="rt-price-table-box rt-price-table-box-custom" style="<?php echo esc_attr($style); ?>">
                 <span><?php echo esc_html($title); ?></span>
                 <h4 style="color: <?php echo isset($code_color) ? $code_color : '#002e52'; ?>"><?php echo wp_kses_post($code) ? 'Mã: ' . $code : ''; ?></h4>
-                <h3 class="<?php echo $change > 0 ? 'increase' : 'decrease' ?>"><?php echo number_format($vifastPrice, 0, '.', ','); ?></h3><span><?php echo wp_kses_post($unit) ? $unit : ''; ?></span>
+                <h3 class="<?php echo $change > 0 ? 'increase' : 'decrease' ?>"><?php echo number_format($vifastPrice, 0, ',', '.'); ?></h3>
                 <div class="text-center"><span class="number <?php echo $change > 0 ? 'increase' : 'decrease' ?>"><span class="fa fa-arrow-<?php echo $change > 0 ? 'up' : 'down' ?>">&nbsp;</span><?php echo round($change <= 0 ? -$change : $change, 2); ?>%</span></div>
+                <br><span>Tại ngày <?php echo date('d-m-Y'); ?></span>
             </div>
         </a>
     </div>
