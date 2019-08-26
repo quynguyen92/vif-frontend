@@ -41,6 +41,9 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
                 fontSize: '<?php echo $font_size; ?>',
                 fontColor: '<?php echo $title_color; ?>',
             },
+            yAxes: function () {
+                
+            },
             tooltips: {
 
             }
