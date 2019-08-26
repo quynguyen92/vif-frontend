@@ -15,10 +15,9 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
     var label = [],
         dataChart = [];
     <?php foreach($response as $item) : ?>
-    <?php $item = (array)$item; ?>
-    var dateTmp = new Date(<?php echo '01/' . $item['key'] ?>);
-    var dateString = (dateTmp.getMonth() + 1) + '/' + dateTmp.getFullYear();
-    label.push(dateString);
+    <?php $item = (array)$item;?>
+    var dateTmp = '<?php echo $item['key']; ?>';
+    label.push(dateTmp.toString());
     dataChart.push(<?php echo $item['value']; ?>);
     <?php endforeach; ?>
 
