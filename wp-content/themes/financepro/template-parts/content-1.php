@@ -40,14 +40,14 @@ $rdtheme_comments_html = '('. $rdtheme_comments_number . ') ' . $rdtheme_comment
 							<?php if ( RDTheme::$options['blog_cats'] ): ?>
 								<li><i class="fa fa-tags" aria-hidden="true"></i><?php the_category( ', ' );?></li>
 							<?php endif; ?>
-							<?php if ( RDTheme::$options['blog_comment_num'] ): ?>
-								<li><i class="fa fa-comments-o" aria-hidden="true"></i><?php echo esc_html( $rdtheme_comments_html );?></li>
-							<?php endif; ?>
 						</ul>			
 					</div>			
 				<?php } ?>	
 			<?php the_excerpt();?>
-			<a class="rdtheme-button-7" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read More', 'financepro' ); ?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<div class="text-center">
+                <a class="rdtheme-button-7" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Xem Thêm', 'financepro' ); ?><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
 		</div>
+        <div class="end-of-content"></div>
 	</div>
 </div>

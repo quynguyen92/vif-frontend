@@ -4853,11 +4853,59 @@ pre {
 
 /* VIF Post listing */
 .vif-post-listing .features-news {
-  width: 80%;
+  width: 100%;
   background-color: #ccc;
   border-radius: 6px;
   padding: 20px;
-  min-height: 506px;
+  min-height: 250px;
+}
+
+.end-of-content {
+  height: 1px;
+  width: 80%;
+  margin: 15px auto;
+  border: 1px solid #f00;
+}
+
+.entry-banner .entry-banner-content {
+  padding: 20px 0;
+}
+
+.content-area {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#header-area-space {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .vif-post-listing .features-news {
+    width: 80%;
+    min-height: 506px;
+  }
+
+  .end-of-content {
+    width: 100%;
+  }
+
+  .entry-banner .entry-banner-content {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  .footer-widget-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-about, .footer-social {
+    text-align: center;
+  }
 }
 
 .list-news {
