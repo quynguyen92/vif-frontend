@@ -4860,6 +4860,10 @@ pre {
   min-height: 250px;
 }
 
+.vif-post-listing .features-news .owl-item {
+  width: 95%;
+}
+
 .end-of-content {
   height: 1px;
   width: 80%;
@@ -4955,6 +4959,7 @@ pre {
   margin: 0 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  min-height: 184px;
 }
 
 .rt-price-table-box > span {

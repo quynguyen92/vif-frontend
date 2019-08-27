@@ -27,7 +27,7 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
             labels: label,
             datasets: [
                 {
-                    label: 'Value',
+                    label: 'NAV',
                     borderColor: '#ffae5f',
                     fill: false,
                     data: dataChart
