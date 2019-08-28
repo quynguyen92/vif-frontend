@@ -4878,38 +4878,11 @@ pre {
 .content-area {
   padding-top: 20px;
   padding-bottom: 20px;
+  min-height: 540px;
 }
 
 #header-area-space {
   margin-top: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .vif-post-listing .features-news {
-    width: 80%;
-    min-height: 506px;
-  }
-
-  .end-of-content {
-    width: 100%;
-  }
-
-  .entry-banner .entry-banner-content {
-    padding: 100px 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-  }
-
-  .footer-widget-logo img {
-    margin: 0 auto;
-  }
-
-  .footer-about, .footer-social {
-    text-align: center;
-  }
 }
 
 .list-news {
@@ -4956,10 +4929,13 @@ pre {
 }
 
 .rt-price-table-box.rt-price-table-box-custom {
-  margin: 0 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
   min-height: 184px;
+}
+
+.price-box-left, .price-box-right {
+  margin: 0 20px;
 }
 
 .rt-price-table-box > span {
@@ -5000,4 +4976,40 @@ pre {
 .header-area.header-fixed.bottomBorder {
   border-bottom: none;
   background: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .vif-post-listing .features-news {
+    width: 80%;
+    min-height: 506px;
+  }
+
+  .end-of-content {
+    width: 100%;
+  }
+
+  .entry-banner .entry-banner-content {
+    padding: 100px 0;
+  }
+
+  .price-box-left {
+    margin: 0 20px 0 80px;
+  }
+
+  .price-box-right {
+    margin: 0 80px 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  .footer-widget-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-about, .footer-social {
+    text-align: center;
+  }
 }
