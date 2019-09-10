@@ -116,10 +116,6 @@ function rdtheme_template_style(){
 			background: url(<?php echo esc_url( RDTheme::$bgimg );?>) no-repeat scroll center center / cover;
 		<?php endif; ?>
 	}
-	.content-area {
-		padding-top: <?php echo esc_html( RDTheme::$padding_top );?>px;
-		padding-bottom: <?php echo esc_html( RDTheme::$padding_bottom );?>px;
-	}
 	<?php
 	return ob_get_clean();
 }

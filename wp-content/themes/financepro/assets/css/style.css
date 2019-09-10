@@ -4876,9 +4876,8 @@ pre {
 }
 
 .content-area {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  min-height: 540px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #header-area-space {
@@ -5009,6 +5008,12 @@ pre {
   .price-box-right {
     margin: 0 80px 0 20px;
   }
+
+  .content-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 540px;
+  }
 }
 @media screen and (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
@@ -5021,5 +5026,9 @@ pre {
 
   .footer-about, .footer-social {
     text-align: center;
+  }
+
+  .contact-form h2:after {
+    display: none;
   }
 }
