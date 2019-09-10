@@ -4978,6 +4978,16 @@ pre {
   background: transparent;
 }
 
+.wpcf7-not-valid-tip {
+  position: relative;
+  top: 0;
+  left: 150px;
+}
+
+.footer-top-area .stylish-input-group {
+    padding-top: 0;
+}
+
 @media screen and (min-width: 768px) {
   .vif-post-listing .features-news {
     width: 80%;
