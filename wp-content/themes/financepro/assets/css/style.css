@@ -4959,6 +4959,10 @@ pre {
   color: #fc0400;
 }
 
+.rt-price-table-box .balance {
+  color: #f7be68;
+}
+
 .team-slider-custom .rtin-item-content h3 {
   font-size: 19px;
   text-align: center;
