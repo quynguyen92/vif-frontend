@@ -4992,8 +4992,8 @@ pre {
 }
 
 .fb_dialog {
-  bottom: 45px !important;
-  right: 12px !important;
+  bottom: 60px !important;
+  right: 15px !important;
 }
 
 @media screen and (min-width: 768px) {
