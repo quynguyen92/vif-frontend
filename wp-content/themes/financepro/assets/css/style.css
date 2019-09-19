@@ -4996,10 +4996,15 @@ pre {
   right: 15px !important;
 }
 
+.chart-tab .active {
+  background-color: #000;
+}
+
+
 @media screen and (min-width: 768px) {
   .vif-post-listing .features-news {
     width: 80%;
-    min-height: 506px;
+    min-height: 552px;
   }
 
   .end-of-content {
@@ -5019,7 +5024,7 @@ pre {
   }
 
   .content-area {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-bottom: 20px;
     min-height: 540px;
   }
