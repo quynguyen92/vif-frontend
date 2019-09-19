@@ -28,7 +28,7 @@ foreach ($vnIndex as $item) {
 }
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#tab2').addClass('hide');
