@@ -5024,6 +5024,12 @@ pre {
   }
 
   .content-area {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    min-height: 540px;
+  }
+
+  .home .content-area {
     padding-top: 0;
     padding-bottom: 20px;
     min-height: 540px;
