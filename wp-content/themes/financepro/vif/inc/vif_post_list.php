@@ -120,13 +120,21 @@ if (!class_exists('VifPostList')) {
                     "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
-                    "heading" => __("Font Size"),
+                    "heading" => __("Title Font Size"),
                     "param_name" => "font_size",
-                    "value" => 20,
+                    "value" => 22,
                     'dependency' => array(
                         'element' => 'showtitle',
                         'value' => array('true'),
                     ),
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("Text Font Size"),
+                    "param_name" => "text_font_size",
+                    "value" => 16,
                 ),
                 array(
                     "type" => "colorpicker",
@@ -166,7 +174,8 @@ if (!class_exists('VifPostList')) {
                 'orderby' => '',
                 'showtitle' => 'true',
                 'title' => $this->translate['title'],
-                'font_size' => 30,
+                'font_size' => 22,
+                'text_font_size' => 16,
                 'section_title_color' => '#222222',
                 'total_number_post' => 6,
             ), $atts));
