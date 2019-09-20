@@ -16,7 +16,7 @@ $response = isset($api_url) ? remoteApi($api_url) : '';
     <canvas id="VifVnIndexChart" style="height: 300px; width: 100%;"></canvas>
 </div>
 <?php
-$vnIndex = remoteApi('http://54.255.145.206:8080/public/getVnStockHistory');
+$vnIndex = isset($api_get_vnindex_url) ? remoteApi($api_get_vnindex_url) : [];
 $vnIndexRe = [];
 foreach ($vnIndex as $item) {
     $item = (array)$item;

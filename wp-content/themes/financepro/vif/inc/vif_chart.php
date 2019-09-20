@@ -142,7 +142,14 @@ if (!class_exists('VifChart')) {
                     "heading" => __("API URL"),
                     "param_name" => "api_url",
                     "value" => '',
-                    "description" => __("Api url"),
+                ),
+                array(
+                    "type" => "textfield",
+                    "holder" => "div",
+                    "class" => "",
+                    "heading" => __("API Get Vn-Index History URL"),
+                    "param_name" => "api_get_vnindex_url",
+                    "value" => '',
                 ),
                 array(
                     'type' => 'css_editor',
@@ -173,6 +180,7 @@ if (!class_exists('VifChart')) {
                 'axis_y_title' => '',
                 'axis_y_unit' => '',
                 'api_url' => '',
+                'api_get_vnindex_url' => '',
                 'css' => '',
             ), $atts));
 
