@@ -26,7 +26,6 @@ if (!class_exists('VifChart')) {
             );
             add_action('init', array($this, 'vc_map'));
             add_shortcode($this->base, array($this, 'shortcode'));
-            wp_register_script('vif_chart_script', get_template_directory_uri() . '/vif/assets/js/chart.min.js', array('jquery'), WPB_VC_VERSION, true);
         }
 
         /**
