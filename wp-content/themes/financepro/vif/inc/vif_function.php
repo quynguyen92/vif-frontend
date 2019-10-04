@@ -1,11 +1,5 @@
 <?php
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_post_list.php';
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_pricing_box.php';
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_pricing_2box.php';
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_chart.php';
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_about.php';
-require_once RDTHEME_BASE_DIR . 'vif/inc/vif_financial_planning.php';
-
+autoRequire();
 if (!function_exists('remoteApi')) {
     /**
      * @param $url
@@ -42,5 +36,18 @@ if (!function_exists('remoteApi')) {
         curl_close($curl);
 
         return json_decode($response);
+    }
+}
+
+function autoRequire()
+{
+    $dir = RDTHEME_BASE_DIR . 'vif/inc/';
+    if ($handle = opendir($dir)) {
+        while (false !== ($entry = readdir($handle))) {
+            if ($entry != "." && $entry != "..") {
+                require_once $dir . $entry;
+            }
+        }
+        closedir($handle);
     }
 }

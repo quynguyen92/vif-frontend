@@ -5012,8 +5012,8 @@ pre {
 
 #loader {
   position: fixed;
-  top: 40%;
-  left: 50%;
+  top: 45%;
+  left: 45%;
   z-index: 3;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -5045,6 +5045,10 @@ pre {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   cursor: pointer;
+}
+
+.rt-infobox-6 .rtin-info-content h3 {
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
