@@ -4,6 +4,7 @@ require_once RDTHEME_BASE_DIR . 'vif/inc/vif_pricing_box.php';
 require_once RDTHEME_BASE_DIR . 'vif/inc/vif_pricing_2box.php';
 require_once RDTHEME_BASE_DIR . 'vif/inc/vif_chart.php';
 require_once RDTHEME_BASE_DIR . 'vif/inc/vif_about.php';
+require_once RDTHEME_BASE_DIR . 'vif/inc/vif_financial_planning.php';
 
 if (!function_exists('remoteApi')) {
     /**
