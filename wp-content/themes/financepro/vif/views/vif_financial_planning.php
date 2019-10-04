@@ -8,18 +8,18 @@
         </div>
         <div class="vc_row vc_row-fluid">
             <div class="vc_row vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-3 padding10">
                     Số tiền đầu tư mỗi tháng
                 </div>
                 <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
                     <input value="2000000" name="price" type="text" style=" border: 1px solid #ccc; 1px;" class="form-control">
                 </div>
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-5 padding10">
                     <span>&nbsp;&nbsp;&nbsp;VND</span>
                 </div>
             </div>
             <div class="vc_row vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-3 padding10">
                     Thời gian bạn định đầu tư
                 </div>
                 <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
@@ -36,30 +36,31 @@
                         <option value="10">10</option>
                     </select>
                 </div>
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-5 padding10">
                     <span>&nbsp;&nbsp;&nbsp;Năm</span>
                 </div>
             </div>
             <div class="vc_row vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-3 padding10">
                     Tăng trưởng NAV của quỹ
                 </div>
                 <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
                     <input value="20" name="profit" type="text" class="form-control" style=" border: 1px solid #ccc; 1px;">
                 </div>
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-5 padding10">
                     <span>&nbsp;&nbsp;&nbsp;%</span>
                 </div>
             </div>
+            <br>
             <div class="vc_row vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
-                    <span>&nbsp;</span>
-                </div>
-                <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
+                <div class="wpb_column vc_column_container vc_col-sm-3 padding10">
                     <span>&nbsp;</span>
                 </div>
                 <div class="wpb_column vc_column_container vc_col-sm-4 padding10">
                     <button type="button" class="btn btn-danger" id="show-result">Xem kết quả</button>
+                </div>
+                <div class="wpb_column vc_column_container vc_col-sm-5 padding10">
+                    <span>&nbsp;</span>
                 </div>
             </div>
         </div>
@@ -111,10 +112,11 @@
             hideLoading();
             return false;
         }
-        var html = '', tmpValue = 0;
+        var html = '', tmpValue = investAmountPerMonth;
         for (var year = 1; year <= investYear; year++) {
-            tmpValue = tmpValue + investAmountPerMonth * 12;
-            tmpValue = tmpValue + (tmpValue * interestRate / 100 * 0.7);
+            for (var month = 1; month <= 12; month++) {
+                tmpValue = parseFloat(tmpValue) + (tmpValue * interestRate * 0.7 / 12 / 100) + parseFloat(investAmountPerMonth);
+            }
             html += '<tr>' +
                 '<td align="center">' + year + '</td>' +
                 '<td align="center">' + number_format(investAmountPerMonth) + '</td>' +
