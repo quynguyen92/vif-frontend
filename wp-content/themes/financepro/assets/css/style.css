@@ -5000,6 +5000,11 @@ pre {
   background-color: #25b100;
 }
 
+.chart-tab {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .financial-planning .vc_row {
   margin-left: 0;
   margin-right: 0;
@@ -5051,9 +5056,26 @@ pre {
   margin-top: 10px;
 }
 
+.rt-post-vc-section-1 .rtin-single-post .rtin-item-info h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category .entry-thumbnail-area img {
+  height: 250px;
+}
+
+.category .entry-content h3,
+.category .entry-content .blog-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @media screen and (min-width: 768px) {
   .vif-post-listing .features-news {
-    width: 80%;
+    width: 90%;
     min-height: 552px;
   }
 
@@ -5083,6 +5105,11 @@ pre {
     padding-top: 0;
     padding-bottom: 20px;
     min-height: 540px;
+  }
+
+  .chart-tab {
+    margin-top: 0;
+    text-align: left;
   }
 }
 @media screen and (max-width: 768px) {

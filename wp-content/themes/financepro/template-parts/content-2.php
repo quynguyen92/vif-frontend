@@ -50,8 +50,6 @@ $thumbnail = false;
 						<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></li>
 					<?php } if ( RDTheme::$options['blog_cats'] ) { ?>
 						<li><i class="fa fa-tag" aria-hidden="true"></i><?php the_category( ', ' );?></li>
-					<?php } if ( RDTheme::$options['blog_comment_num'] ) { ?>
-						<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $rdtheme_comments_html );?></a></li>
 					<?php } ?>
 				</ul>
 			</div>
