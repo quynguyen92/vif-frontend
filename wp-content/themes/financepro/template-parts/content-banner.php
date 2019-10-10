@@ -23,7 +23,7 @@ elseif ( is_home() ) {
 	}
 }
 elseif ( is_archive() ) {
-	$rdtheme_title = get_the_archive_title();
+	$rdtheme_title = single_cat_title( '', false );
 }
 else{
 	$rdtheme_title = get_the_title();
