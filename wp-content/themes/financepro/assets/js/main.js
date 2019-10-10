@@ -112,7 +112,6 @@ jQuery(document).ready(function($){
 		if(Hh1.length){
 			mHeight = $('body .header-area').outerHeight();		
 			totalHeight = mHeight - adminBarHeight;
-			Hh1slider.css("margin-top", totalHeight + 'px');
 		}
 	}
 	

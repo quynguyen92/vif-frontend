@@ -284,7 +284,7 @@ if (!class_exists('Vif_Info_Text')) {
                     "class" => "",
                     "heading" => __("Button Text"),
                     "param_name" => "button_text",
-                    "value" => $this->translate['button_text'],
+                    "value" => "Button Text",
                     'dependency' => array(
                         'element' => 'display_button',
                         'value' => array('true'),

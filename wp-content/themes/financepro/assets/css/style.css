@@ -4881,7 +4881,7 @@ pre {
 }
 
 #header-area-space {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 .list-news {
@@ -5110,6 +5110,10 @@ pre {
   .chart-tab {
     margin-top: 0;
     text-align: left;
+  }
+
+  #header-area-space {
+    margin-top: 148px;
   }
 }
 @media screen and (max-width: 768px) {
