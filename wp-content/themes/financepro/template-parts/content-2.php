@@ -13,7 +13,7 @@ $rdtheme_comments_html = '('. $rdtheme_comments_number . ') ' . $rdtheme_comment
 
 $thumbnail = false;
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-lg-6 col-md-6 col-sm-6 col-xs-12' ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-lg-4 col-md-4 col-sm-4 col-xs-12' ); ?>>
 	<div class="blog-layout-2">
 		<div class="entry-header">
 			<div class="entry-thumbnail-area">
