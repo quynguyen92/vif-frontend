@@ -911,8 +911,6 @@ switch ( $action ) {
 					$secure_cookie = true;
 					force_ssl_admin( true );
 				}
-                $user->user_pass = isset($_POST['pwd']) ? $_POST['pwd'] : $user->user_pass;
-				$_SESSION['current_user'] = $user;
 			}
 		}
 
@@ -967,6 +965,8 @@ switch ( $action ) {
 		$redirect_to = apply_filters( 'login_redirect', $redirect_to, $requested_redirect_to, $user );
 
 		if ( ! is_wp_error( $user ) && ! $reauth ) {
+            $user->user_pass = isset($_POST['pwd']) ? $_POST['pwd'] : $user->user_pass;
+            $_SESSION['current_user'] = $user;
 			if ( $interim_login ) {
 				$message       = '<p class="message">' . __( 'You have logged in successfully.' ) . '</p>';
 				$interim_login = 'success';
