@@ -1,8 +1,6 @@
 <?php
 add_role('customer', __('Customer'), array(
-        'read' => false,
-        'edit_posts' => false,
-        'edit_theme_options' => false
+        'read' => true
     )
 );
 $currentUser = wp_get_current_user();
