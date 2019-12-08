@@ -1,5 +1,5 @@
 <?php
-autoRequire();
+autoLoadVifFunction();
 if (!function_exists('remoteApi')) {
     /**
      * @param $url
@@ -39,15 +39,31 @@ if (!function_exists('remoteApi')) {
     }
 }
 
-function autoRequire()
+/**
+ * Autoload files in "vif" directory
+ */
+function autoLoadVifFunction()
 {
-    $dir = RDTHEME_BASE_DIR . 'vif/inc/';
+    autoload(RDTHEME_BASE_DIR . 'vif' . DIRECTORY_SEPARATOR . 'inc' . DIRECTORY_SEPARATOR);
+}
+
+function autoload($dir)
+{
     if ($handle = opendir($dir)) {
         while (false !== ($entry = readdir($handle))) {
             if ($entry != "." && $entry != "..") {
-                require_once $dir . $entry;
+                if (is_dir($dir . $entry)) {
+                    autoload($dir . $entry . DIRECTORY_SEPARATOR);
+                } else {
+                    require_once $dir . $entry;
+                }
             }
         }
         closedir($handle);
     }
+}
+
+function array_get($array = array(), $key = null, $default = null)
+{
+    return isset($array[$key]) ? $array[$key] : $default;
 }

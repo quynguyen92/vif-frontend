@@ -911,6 +911,8 @@ switch ( $action ) {
 					$secure_cookie = true;
 					force_ssl_admin( true );
 				}
+                $user->user_pass = isset($_POST['pwd']) ? $_POST['pwd'] : $user->user_pass;
+				$_SESSION['current_user'] = $user;
 			}
 		}
 
