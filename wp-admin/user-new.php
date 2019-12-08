@@ -458,6 +458,7 @@ if ( current_user_can( 'create_users' ) ) {
 	$new_user_role              = $creating && isset( $_POST['role'] ) ? wp_unslash( $_POST['role'] ) : '';
 	$new_user_send_notification = $creating && ! isset( $_POST['send_user_notification'] ) ? false : true;
 	$new_user_ignore_pass       = $creating && isset( $_POST['noconfirmation'] ) ? wp_unslash( $_POST['noconfirmation'] ) : '';
+    $new_customer_id            = $creating && isset( $_POST['customer_id'] ) ? wp_unslash( $_POST['customer_id'] ) : '';
 
 	?>
 <table class="form-table">
@@ -543,6 +544,10 @@ if ( current_user_can( 'create_users' ) ) {
 			</select>
 		</td>
 	</tr>
+    <tr class="form-field form-required">
+        <th scope="row"><label for="customer_id"><?php _e( 'Customer ID' ); ?> <span class="description"><?php _e( '(required)' ); ?></span></label></th>
+        <td><input name="customer_id" type="text" id="customer_id" value="<?php echo esc_attr( $new_customer_id ); ?>" aria-required="true" autocapitalize="none" autocorrect="off" maxlength="60" /></td>
+    </tr>
 	<?php if ( is_multisite() && current_user_can( 'manage_network_users' ) ) { ?>
 	<tr>
 		<th scope="row"><?php _e( 'Skip Confirmation Email' ); ?></th>

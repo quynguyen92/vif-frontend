@@ -105,6 +105,10 @@ function edit_user( $user_id = 0 ) {
 		$user->description = trim( $_POST['description'] );
 	}
 
+    if ( isset( $_POST['customer_id'] ) ) {
+        $user->customer_id = trim( $_POST['customer_id'] );
+    }
+
 	foreach ( wp_get_user_contact_methods( $user ) as $method => $name ) {
 		if ( isset( $_POST[ $method ] ) ) {
 			$user->$method = sanitize_text_field( $_POST[ $method ] );

@@ -1713,6 +1713,9 @@ function wp_insert_user( $userdata ) {
 	 */
 	$meta['description'] = apply_filters( 'pre_user_description', $description );
 
+    $customer_id = empty( $userdata['customer_id'] ) ? '' : $userdata['customer_id'];
+    $meta['customer_id'] = apply_filters( 'pre_user_customer_id', $customer_id );
+
 	$meta['rich_editing'] = empty( $userdata['rich_editing'] ) ? 'true' : $userdata['rich_editing'];
 
 	$meta['syntax_highlighting'] = empty( $userdata['syntax_highlighting'] ) ? 'true' : $userdata['syntax_highlighting'];
@@ -1744,7 +1747,7 @@ function wp_insert_user( $userdata ) {
 		$user_nicename = $alt_user_nicename;
 	}
 
-	$compacted = compact( 'user_pass', 'user_email', 'user_url', 'user_nicename', 'display_name', 'user_registered' );
+	$compacted = compact( 'user_pass', 'user_email', 'user_url', 'user_nicename', 'display_name', 'user_registered', 'customer_id' );
 	$data      = wp_unslash( $compacted );
 
 	if ( ! $update ) {
