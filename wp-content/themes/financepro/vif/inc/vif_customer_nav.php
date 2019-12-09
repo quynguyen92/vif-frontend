@@ -3,6 +3,10 @@ add_role('customer', __('Customer'), array(
         'read' => true
     )
 );
+add_action('load-profile.php', function () {
+    if (current_user_can('customer'))
+        exit(wp_safe_redirect(admin_url()));
+});
 
 function showCustomerNav()
 {
