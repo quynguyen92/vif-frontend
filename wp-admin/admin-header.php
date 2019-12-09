@@ -273,7 +273,9 @@ if ( is_network_admin() ) {
 	 *
 	 * @since 3.1.0
 	 */
-	do_action( 'admin_notices' );
+	if (!current_user_can('customer')) {
+        do_action( 'admin_notices' );
+    }
 }
 
 /**

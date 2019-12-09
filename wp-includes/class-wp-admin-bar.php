@@ -488,6 +488,12 @@ class WP_Admin_Bar {
 
 		echo "<ul id='" . esc_attr( 'wp-admin-bar-' . $node->id ) . "'$class>";
 		foreach ( $node->children as $item ) {
+		    if ($item->id == 'wp-logo') {
+		        continue;
+            }
+		    if ($item->id == 'edit-profile' && current_user_can('customer')) {
+		        continue;
+            }
 			$this->_render_item( $item );
 		}
 		echo '</ul>';
