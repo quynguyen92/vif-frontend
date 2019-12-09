@@ -117,8 +117,8 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 		$login_header_url   = network_home_url();
 		$login_header_title = get_network()->site_name;
 	} else {
-		$login_header_url   = __( 'https://wordpress.org/' );
-		$login_header_title = __( 'Powered by WordPress' );
+		$login_header_url   = __( 'https://vifonline.com.vn' );
+		$login_header_title = __( 'Công ty cổ phần VIF Việt Nam' );
 	}
 
 	/**
@@ -1091,21 +1091,21 @@ switch ( $action ) {
 	</form>
 
 		<?php if ( ! $interim_login ) { ?>
-	<p id="nav">
-			<?php
-			if ( ! isset( $_GET['checkemail'] ) || ! in_array( $_GET['checkemail'], array( 'confirm', 'newpass' ) ) ) :
-				if ( get_option( 'users_can_register' ) ) :
-					$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
-
-					/** This filter is documented in wp-includes/general-template.php */
-					echo apply_filters( 'register', $registration_url );
-
-					echo esc_html( $login_link_separator );
-				endif;
-				?>
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?' ); ?></a>
-			<?php endif; ?>
-	</p>
+<!--	<p id="nav">-->
+<!--			--><?php
+//			if ( ! isset( $_GET['checkemail'] ) || ! in_array( $_GET['checkemail'], array( 'confirm', 'newpass' ) ) ) :
+//				if ( get_option( 'users_can_register' ) ) :
+//					$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
+//
+//					/** This filter is documented in wp-includes/general-template.php */
+//					echo apply_filters( 'register', $registration_url );
+//
+//					echo esc_html( $login_link_separator );
+//				endif;
+//				?>
+<!--		<a href="--><?php //echo esc_url( wp_lostpassword_url() ); ?><!--">--><?php //_e( 'Lost your password?' ); ?><!--</a>-->
+<!--			--><?php //endif; ?>
+<!--	</p>-->
 	<?php } ?>
 
 	<script type="text/javascript">
