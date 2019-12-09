@@ -911,6 +911,7 @@ final class WP_Screen {
 			return;
 		}
 		?>
+        <?php if (!current_user_can('customer')) : ?>
 		<div id="screen-meta-links">
 		<?php if ( $this->get_help_tabs() ) : ?>
 			<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
@@ -925,6 +926,7 @@ final class WP_Screen {
 			</div>
 		<?php endif; ?>
 		</div>
+        <?php endif;?>
 		<?php
 	}
 
