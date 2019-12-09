@@ -1,4 +1,4 @@
-<table class="wp-list-table widefat fixed striped customer-nav">
+<table class="wp-list-table widefat striped customer-nav">
     <thead>
     <tr>
         <th>Nhà đầu tư</th>
@@ -11,11 +11,11 @@
     </tr>
     </thead>
     <tbody>
-    <?php if (isset($data)) : ?>
+    <?php if (isset($data) && !empty($data)) : ?>
         <?php
         $totalCCQAfter = $data->amountCCQAfter * $data->priceCCQAfter;
         $totalCCQMarket = $data->amountCCQAfter * $data->priceCCQMarket;
-        $rate = ($totalCCQMarket - $totalCCQAfter) / $totalCCQAfter;
+        $rate = $totalCCQAfter ? (($totalCCQMarket - $totalCCQAfter) / $totalCCQAfter) : 0;
         ?>
     <tr>
         <td><?php echo isset($currentUser) ? $currentUser->display_name : ''; ?></td>
@@ -28,7 +28,7 @@
     </tr>
     <?php else : ?>
     <tr>
-        <td colspan="10">Không có thông tin nào để hiển thị.</td>
+        <td align="center" colspan="10">Không có thông tin nào để hiển thị.</td>
     </tr>
     <?php endif; ?>
     </tbody>

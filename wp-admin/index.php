@@ -145,7 +145,12 @@ if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) )
 <?php endif; ?>
 
 	<div id="dashboard-widgets-wrap">
-	<?php wp_dashboard(); ?>
+    <?php $currentUser = wp_get_current_user(); ?>
+    <?php if ($currentUser->has_cap('customer')) : ?>
+        <?php showCustomerNav(); ?>
+    <?php else : ?>
+        <?php wp_dashboard(); ?>
+    <?php endif ?>
 	</div><!-- dashboard-widgets-wrap -->
 
 </div><!-- wrap -->

@@ -3,17 +3,8 @@ add_role('customer', __('Customer'), array(
         'read' => true
     )
 );
-$currentUser = wp_get_current_user();
-if (in_array('customer', $currentUser->roles)) {
-    add_action('admin_menu', 'vif_menu_pages');
-}
 
-function vif_menu_pages()
-{
-    add_menu_page('NAV', 'Customer NAV', 'read', 'customer_nav', 'customer_nav', 'dashicons-money');
-}
-
-function customer_nav()
+function showCustomerNav()
 {
     $sessionUser = isset($_SESSION['current_user']) ? $_SESSION['current_user'] : new WP_User();
 
@@ -51,7 +42,7 @@ function customer_nav()
     $response = $customer->remoteApi($customer->getCustomerNavUrl() . '?' . http_build_query($params), array(), 'GET');
 
     $customer->response([
-        'data' => $response[0],
+        'data' => array_get($response, 0),
         'currentUser' => $currentUser
     ]);
 }
