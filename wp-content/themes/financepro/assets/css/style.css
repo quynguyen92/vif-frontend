@@ -144,7 +144,7 @@ h2 {
     line-height: 31px;
     font-weight: 500;
 }
-}
+
 h3 {
 	font-size: 22px;
     line-height: 30px;
@@ -532,7 +532,7 @@ ul.wpb_thumbnails-fluid > li {
 .site-header .main-navigation ul li.mega-menu ul.sub-menu li a {
   color: #ffffff;
 }
-.site-header .main-navigation ul li.mega-menu ul.sub-menu li a::hover {
+.site-header .main-navigation ul li.mega-menu ul.sub-menu li a:hover {
   background-color: #cb011b;
   color: #071041;
 }
@@ -1398,7 +1398,7 @@ ul.wpb_thumbnails-fluid > li {
   width: 25px;
 }
 .header-style-7 .site-header .menu-7 {
-  background-color: #222222;
+  background-color: #09476c;
 }
 .header-style-7 .site-header .menu-7 .main-navigation {
   position: relative;
@@ -1671,7 +1671,6 @@ ul.wpb_thumbnails-fluid > li {
   background-color: #001a39;
   padding: 20px 0;
   color: #999999;
-  font-style: 14px;
   text-align: center;
 }
 .footer-bottom-area a:link,
@@ -4433,7 +4432,7 @@ p.demo_store {
   background-color: #f5f5f5;
 }
 .woocommerce table.shop_table.woocommerce-checkout-review-order-table {
-  border-color: 1px solid #ccc;
+  border-color: #ccc;
   border-width: 0 0 1px 1px;
 }
 .woocommerce table.shop_table.woocommerce-checkout-review-order-table td,
