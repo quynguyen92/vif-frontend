@@ -5072,6 +5072,10 @@ pre {
   white-space: nowrap;
 }
 
+iframe .freebirdDisclaimerColor {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .vif-post-listing .features-news {
     width: 90%;

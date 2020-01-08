@@ -1,13 +1,15 @@
 <?php
-if (!class_exists('Vif_Info_Text')) {
-    /**
-     * Class Vif_Info_Text
-     */
-    class Vif_Info_Text extends WPBakeryShortCode
+/**
+ * Class VifInfoText
+ *
+ * Credit by: VIF Team
+ */
+if (!class_exists('VifInfoText')) {
+    class VifInfoText extends WPBakeryShortCode
     {
 
         /**
-         * Vif_Info_Text constructor.
+         * VifInfoText constructor.
          */
         public function __construct()
         {
@@ -379,4 +381,4 @@ if (!class_exists('Vif_Info_Text')) {
     }
 }
 
-new Vif_Info_Text();
+new VifInfoText();
