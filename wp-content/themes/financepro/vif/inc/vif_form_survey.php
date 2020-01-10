@@ -35,14 +35,6 @@ if (!class_exists('VifFormSurvey')) {
                     'value' => "#f8f8f8",
                 ),
                 array(
-                    "type" => "colorpicker",
-                    "holder" => "div",
-                    "class" => "",
-                    "heading" => __("Background Hover Color", 'academics-core'),
-                    "param_name" => "bghover",
-                    'value' => "#cb011b",
-                ),
-                array(
                     "type" => "textfield",
                     "holder" => "div",
                     "class" => "",
@@ -95,7 +87,6 @@ if (!class_exists('VifFormSurvey')) {
         {
             extract(shortcode_atts(array(
                 'bgcolor' => '#f8f8f8',
-                'bghover' => '#cb011b',
                 'title' => $this->translate['title'],
                 'title_color' => '#002e52',
                 'title_font' => '20',
