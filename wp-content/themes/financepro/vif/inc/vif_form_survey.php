@@ -95,7 +95,6 @@ if (!class_exists('VifFormSurvey')) {
             ), $atts));
 
             return $this->render('vif_form_survey', get_defined_vars());
-
         }
     }
 }
