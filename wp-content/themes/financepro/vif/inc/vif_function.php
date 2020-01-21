@@ -44,6 +44,7 @@ if (!function_exists('remoteApi')) {
  */
 function autoLoadVifFunction()
 {
+    include plugin_dir_path(__DIR__) . 'core' . DIRECTORY_SEPARATOR . 'vif_custom_page.php';
     autoload(RDTHEME_BASE_DIR . 'vif' . DIRECTORY_SEPARATOR . 'inc' . DIRECTORY_SEPARATOR);
 }
 

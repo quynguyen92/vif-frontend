@@ -1,6 +1,4 @@
 <?php
-include plugin_dir_path(__DIR__) . 'core' . DIRECTORY_SEPARATOR . 'vif_custom_page.php';
-
 /**
  * Class VifAbout
  *
