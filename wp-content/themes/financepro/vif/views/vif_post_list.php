@@ -49,7 +49,7 @@ $total = $category->category_count;;
 </div>
 <script type="application/javascript">
     $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
+        $('.features-news .owl-carousel').owlCarousel({
             loop: false,
             nav: true,
             navText: ["<i class=\"fa fa-angle-left\"></i>", "<i class=\"fa fa-angle-right\"></i>"],
